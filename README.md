@@ -1,39 +1,102 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [The Beauty Box](***ADD WEBPAGE ADDRESS***)
+(Developer: Natalie Lockyer)
 
-Welcome,
+## Demo
+[To view live website, click here](***ADD WEBPAGE ADDRESS***)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Purpose of the Project
+The Beauty Box is a ficticious E-Commerce website that sells beauty products and accessories. The website also has make-up tutorial videos and make-up blogs. 
+The website has been designed to give the user a great experience, from an attractive and eyecatching website, to filtering our products to see the newly listed items, tips and tricks in our make-up tutorials and blogs containing up to date and intresting information.  
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+This full stack frame work has been built using the Django framework. 
 
-## Codeanywhere Reminders
+The Beauty Box, provides its users with 
+* A registration page, which will give the user a profile page once complete. The profile page will allow the user to add a profile picture, update their contact/delivery and payment details and also see their previous orders (if any).
+* A product page, detailing all our items we have for sale, which can be filtered into many different categories.
+* A checkout page, listing the items in their basket and a secure checkout.
+* A tutorial page were users can get the latest tips and tricks and instructions on how to apply their make-up.
+* A blog page, again with all the lastest tips and tricks, and the most up to date and interesting information. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+# Contents
++ [User Experience](#user-experience)
+    + [Key Project Goals](#key-project-goals)
+    + [Target Audience](#target-audience)
+    + [User Requirements and Expectations](#user-requirements-and-expectations)
+    + [User Stories](#user-stories)
+    + [Wireframes](#wireframes)
+      + [Homepage mobile and desktop](#homepage-mobile-and-desktop)
+      + [About Me mobile and desktop](#about-me-page-mobile-and-desktop)
+      + [Benefits mobile and desktop](#benefits-page-mobile-and-desktop)
+      + [Recipes mobile and desktop](#recipe-page-mobile-and-desktop)
+    + [Entity Relationship Diagram (ERD)](#entity-relationship-diagram)
++ [Design](#design)
+    + [Typography ](#typography)
++ [Features](#features)
+    + [Main Start Page](#main-start-page)
+    + [About Me Pageg](#about-me-page)
+    + [Benefits Page](#benefits-page)
+    + [Recipe Page](#recipe-page)
+    + [Method Page](#method-page)
+    + [Category Page](#category-page)
+    + [SignUp Page](#signup-page)
+    + [Logout Page](#log-out-page)
+    + [Login Page](#login-page)
+    + [Comments Section](#comments-section)
++ [Future Features](#future-features)
++ [Technologies Used](#technologies-used)
+    + [Languages Used](#language)
+    + [Frameworks Used](#frameworks-and-tools)
++ [Testing](#testing)
+  + [Code Validation](#code-validation)
+  + [Full Testing](#full-testing)
+  + [Fixed Bugs](#fixed-bugs)
+  + [Supported Browsers](#supported-browsers)
+  + [Deployment and Local Deployment](#deployment-and-local-deployment)
+  + [Deployment](#deployment)
+  + [Local Deployment](#local-deployment)
+  + [How to Clone](#how-to-clone)
++ [Credits](#credits)
++ [Acknowledgement](#acknowledgements)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+***
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# User Experience
 
-`http_server`
+### Key Project Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* To write and develop an E-commerce website that is an eyecatching, informative, interactive, and enjoyable website that users will want to return to.
+* The user will be able to navigate around the website with ease, either on a mobile or desktop device. 
+* On inital loading of the website, a modal will appear asking if the user wishes to subscribe to emails. 
+* The main homepage is clear as to what the website is about and have accessible menus taking the user to the different pages of the website. 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+*  <strong>Users will be able to find out about the team who are behind the blog.</strong>
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Users that register for a Beauty Box account will be able to see their own profile, which will have up to date contact/delivery and payment details. Users will also be able to see their order history (if any). 
+* Users will be able to see a products page that lists all the items that Beauty Box has for sale. Users will be able to filter the items into categories of their choosing.
+* Users will be able to add products to a basket, go to checkout and pay for the items through a secure checkout. Users can also use discount codes.
+* Users can view make up tutorials and rate them on their content
+* User can view blog posts which provide intereting and up to date information, users can comment and rate the content of the blogs. 
+* Users can get in touch with our team if required.
 
-To log into the Heroku toolbelt CLI:
+### Target Audience
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Anyone over the age of 12, that wears or has an interest in make-up.
+* Anyone who is looking for gift ideas or to make a purchase for themself. 
+* Users that want to learn how to apply make up via an online tutorial.
+* Users who like to keep up to date with the latest tips and tricks blogs. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Requirements and Expectations 
 
----
+* An accessable website, that is clear and easy to navigate and understand.
+* The ability to register for a Beauty Box account
+* The ability to view products, and view them in more detail, before they add them to their basket.
+* The ability to filter products into categories.
+* The ability to take the items to a checkout and pay for the items securely. 
+* The ability to view, comment/edit/ & delete comments they have made.
+* The ability to rate tutorials and blog content. 
+* The ability to get in touch.
 
-Happy coding!
+
+### User Stories
