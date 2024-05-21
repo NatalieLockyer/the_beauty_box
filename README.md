@@ -93,10 +93,30 @@ The Beauty Box, provides its users with
 * The ability to register for a Beauty Box account
 * The ability to view products, and view them in more detail, before they add them to their basket.
 * The ability to filter products into categories.
-* The ability to take the items to a checkout and pay for the items securely. 
+* The ability to take the products to a checkout and pay for the products securely. 
 * The ability to view, comment/edit/ & delete comments they have made.
 * The ability to rate tutorials and blog content. 
 * The ability to get in touch.
 
 
 ### User Stories
+
+As a site user:
+
+* I am able to view a list of products
+* I am able to view individual products, which contain an image, description, price, skin type, quantity and an add to bag button if I wish. 
+* I want to be able to identify any products that are in the sale, or be able to use a discount code on the site. 
+* I want to be able to view the products in my bag, amend them if required, see the total of the products and be able to make a secure payment. 
+* I want to be able to register for an account. I want to be able to easily login and out. I am then able to see my personal information, previous orders if any, make changes to my personal information or payment details and view order confirmations. I also want to be able to reset my password if I forget it.
+* I want to be able to sort and filter the available products, so that I can quickly identify the best rated and best priced items.
+* I want to be able to search for a product by its name.
+* I want to be able to add my payment details quickly and be confident that this is a safe and secure process. 
+* I want to see confirmation of the products in my bag before purchase and an email confirmation once the products have been paid for. 
+
+
+As a store owner:
+
+* I can add new products to my store
+* I can edit and update products so that I am able to change the product description, prices, images and other product details
+* I can delete products when they are no longer for sale. 
+
