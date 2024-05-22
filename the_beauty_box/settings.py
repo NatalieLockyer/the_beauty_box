@@ -83,6 +83,16 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email' # Tells allauth to allow authentication by username or email
+ACCOUNT_EMAIL_REQUIRED = True # Email is required to register for site
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory' # Email is a real email address
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True # Email entered twice to check for typos
+ACCOUNT_USERNAME_MIN_LENGTH = 4 # Minimum length for username 
+LOGIN_URL = '/accounts/login/' # Login URL
+LOGIN_REDIRECT_URL = '/' # Redirect URL after login - e.g. Homepage
+
 WSGI_APPLICATION = 'the_beauty_box.wsgi.application'
 
 
