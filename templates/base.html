@@ -32,13 +32,22 @@
 
     <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
 </head>
-<body>
-    <header class="container-fluid fixed-top"></header>
+    <body>
+        <header class="container-fluid fixed-top"></header>
 
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
+        {% if messages %}
+            <div class="message-container"></div>
+        {% endif %}
 
-</body>
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+    
+        {% block postloadjs %}
+        {% endblock %}
+
+    </body>
 
 </html>
