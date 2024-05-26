@@ -11,8 +11,7 @@ body {
 }
 
 header {
-    padding-bottom: 40px;
-    /* Adjust based on the height of your banner */
+    padding-bottom: 30px;
 }
 
 .banner {
