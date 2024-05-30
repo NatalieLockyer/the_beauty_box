@@ -14,6 +14,11 @@ header {
     padding-bottom: 30px;
 }
 
+.highlight {
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
 .banner {
     width: 100%;
     background-color: #333;
@@ -24,7 +29,6 @@ header {
     color: white;
     padding: 10px 0;
     z-index: 1000;
-    /* Ensure it stays on top */
     text-align: center;
 }
 
@@ -46,7 +50,6 @@ header {
 
     100% {
         transform: translateX(-300%);
-        /* Adjust based on the number of items */
     }
 }
 
@@ -60,6 +63,7 @@ header {
 }
 
 .logo-font {
+    font-family: 'Raleway';
     text-transform: uppercase;
 }
 
