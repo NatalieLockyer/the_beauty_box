@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    padding-bottom: 30px;
+    padding-bottom: 42px;
 }
 
 .highlight {
@@ -56,6 +56,22 @@ header {
         transform: translateX(-300%);
     }
 }
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+
+.main_content {
+    margin-top: 313.89px;
+}
+
 
 /* from Bulma */
 .icon {
