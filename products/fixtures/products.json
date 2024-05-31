@@ -1,0 +1,498 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000001",
+            "name": "Prime Time Foundation Primer",
+            "brand": "bareMinerals",
+            "description": "An amazing preservative-free foundation primer that's great for all skin types. Developed to combat flaky dryness, rough patches, fine lines, excess oil, enlarged pores, and uneven texture, this mineral-infused, satin-finish formula glides on seamlessly with no tacky feel to provide a skin-smoothing complexion before you apply foundation. For added age-defying power, it is infused with soothing plant extracts, antioxidants, and nourishing vitamins C and E.",
+            "price": 22.99,
+            "category": 1,
+            "rating": 4.3,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2017/03/bareMinerals_Prime-Time-Foundation-Primer-Brightening_Brightening.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000002",
+            "name": "Star Fluid Foundation SPF 30",
+            "brand": "Dior",
+            "description": "Dior Star Fluid Foundation SPF 30 is a Foundation that retails for $50.00 and contains 1.00 oz. There are 15 shades that have been released, which you can select from below.",
+            "price": 35.00,
+            "category": 1,
+            "rating": 4.5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2016/12/dior_starliquid_010ivory001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000003",
+            "name": "HD Liquid Coverage Foundation",
+            "brand": "Catrice",
+            "description": "The HD Liquid Coverage Foundation continues to impress with its weightless, liquid texture that feels ultra-light on the skin with a second skin-effect and gives the complexion a velvety-matte, perfected and natural finish for up to 24 hours. Thanks to its high coverage, it visibly makes skin impurities disappear and is water, sweat and transfer-proof.",
+            "price": 29.99,
+            "category": 1,
+            "rating": 3,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2018/05/catrice_online-only-hd-liquid-coverage-foundation_light-beige-010.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000004",
+            "name": "Lingerie de Peau Natural Perfection Foundation SPF20",
+            "brand": "Guerlain",
+            "description": "A natural foundation that smooths and contours giving a soft looking complexion.",
+            "price": 40.50,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2016/08/guerlain_lingeriedepeau_03nnaturel001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000005",
+            "name": "Double Duty Beauty Empowered Hybrid Gel Foundation",
+            "brand": "Tarte",
+            "description": "Double Duty Beauty Empowered Hybrid Gel Foundation is a cream foundation with a natural finish and full coverage",
+            "price": 21.99,
+            "category": 1,
+            "rating": 4.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2016/08/tarte_doubleduty_mediumneutral001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "f0000006",
+            "name": "Rainforest of the Sea Water Foundation Broad Spectrum SPF 15",
+            "brand": "Tarte",
+            "description": "A lightweight, full-coverage hydrating foundation infused with tarte's Rainforest of the Sea™ complex and non-chemical SPF 15 sunscreen. Medium-Tan Sand - medium to tan skin with yellow undertones",
+            "price": 16,
+            "category": 1,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2016/03/tarte_rainforestfoundation_lightmediumbeige001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000001",
+            "name": "Eye Paint Eye Shadow",
+            "brand": "Bobbi Brown",
+            "description": "Bobbi Brown Eye Paint Eye Shadow is a Eyeshadow. There are 8 shades that have been released, which you can select from below.",
+            "price": 8.99,
+            "category": 2,
+            "rating": 3.5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2011/11/bobbibrown_chocolategoldeyepaint011.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000002",
+            "name": "Voluminous Carbon Black Mascara",
+            "brand": "L'Oreal",
+            "description": "Voluminous Carbon Black Volume Building Mascara is uniquely formulated to resist clumping, soften and build lashes up to 5X their natural thickness with 2X the intensity of your regular black shade. -The unique maximizing formula quickly thickens and builds lashes in a single application for a full and dramatic look. -The Volume Maximizing Brush thickens lashes evenly and smoothly, leaving them soft with virtually no flakes, smudges or clumps. Clump-resistant. Fragrance-free. Ophthalmologist-tested and allergy-tested. Suitable for sensitive eyes and contact lens wearers.",
+            "price": 6.00,
+            "category": 2,
+            "rating": 4,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/05/loreal_carbonblack.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000003",
+            "name": "Film Noir Full Spectrum Mascara",
+            "brand": "Hourglass",
+            "description": "A mascara that offers multiple fringe benefits in one full-spectrum formula. What it does: Film Noir's signature hourglass-shaped brush is designed for optimal application, adding volume, length, lift, and separation to lashes. The intense concentration of Panthenol (ProVitamin B5) adds a reflective, jet-black sheen for dramatic impact. ",
+            "price": 13.50,
+            "category": 2,
+            "rating": 4.2,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/05/hourglass_filmnoir.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000004",
+            "name": "Cream Colour Base Eye Shadow Palette x 6",
+            "brand": "MAC",
+            "description": "MAC Cream Colour Base Eye Shadow Palette x 6 is a Eye Palette that retails for £40.00 and contains 0.21 oz.",
+            "price": 40.00,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2017/01/mac_glamourize-me_001_palette.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000005",
+            "name": "Mascara Gel Irise Sparkling Mascara Top Coat",
+            "brand": "Chanel",
+            "description": "Chanel Mascara Gel Irise Sparkling Mascara Top Coat is a Mascara that retails for £30.00 and contains 0.28 oz.",
+            "price": 30.00,
+            "category": 2,
+            "rating": 4.2,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/10/chanel_bronzeplatinemascara003.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "e0000006",
+            "name": "Passionately Pretty Eye Shadow Collection",
+            "brand": "Too Faced",
+            "description": "Create your own love story with endless, passionately pretty eye looks. Our love-worthy eye collection features fifteen silky shadows in shimmer, pearl and matte finishes. Innovative slurry powder technology creates velvety, smooth and soft pigments that offer multidimensional, intense color payoff. From flirtatious neutrals to romantic pinks and passionate emeralds, this palette allows you to create limitless looks that anyone will fall head over heels for.",
+            "price": 16.99,
+            "category": 2,
+            "rating": 4.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2015/06/toofaced_lovepalette001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000001",
+            "name": "Sheer Color Lip Gloss",
+            "brand": "Bobbi Brown",
+            "description": "Bobbi has sized up all her glosses to give you an extra dose of shine. Wear it on its own for sheer color or swipe it on top of lipstick for extra shine, plus the new tapered applicator lets you apply it like a pro. Bonus: Sheer Color Lip Gloss is infused with soothing botanical extracts to keep lips healthy and soft.",
+            "price": 15.00,
+            "category": 3,
+            "rating": 4.2,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2012/04/bobbibrown_citrus001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000002",
+            "name": "Lip Definer",
+            "brand": "Burberry",
+            "description": "Burberry soft and smooth Lip Definer add natural looking definition to the lips, effortlessly enhancing their shape and colour.",
+            "price": 14.00,
+            "category": 3,
+            "rating": 4.9,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/04/burberry_lipdefiner.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000003",
+            "name": "Addict Extreme Lip Color",
+            "brand": "Dior",
+            "description": "Dior Addict fashion lipstick goes to the Extreme, with radiant colours, a perfect hold wet-look texture, and audacious, sophisticated Dior styles. At the heart of this new soft, sensual texture lie 4 specialist waxes, acting in a targeted manner to correctly combine these extremes in a single formula. This veritable technical feat achieves perfect hold, comfort, and shine in an astonishingly fine film. Dior Addict Extreme is available in 12 shades of pure radiant pigment, from nudes to the boldest shades, exploring all the facets of Dior elegance. A new style means a new dress code: the Dior Addict case plays on transparent, vibrant black - black as in perfection, mystery and timelessness.",
+            "price": 20.00,
+            "category": 3,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2012/08/dior_incognito001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000004",
+            "name": "Mineralize Lip Balm",
+            "brand": "MAC",
+            "description": "A liquid lip balm that adds moisture while providing the right pop of color and mirror-like shine. Enriched with a special, nourishing, mineral-rich complex. Can be worn alone or over other lip products.",
+            "price": 18.99,
+            "category": 3,
+            "rating": 4.6,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/04/mac_bakingbeauty001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000005",
+            "name": "Matte Lipstick",
+            "brand": "NYX",
+            "description": "Load your lips with plush, pigment-rich color. This shockingly smooth lip color glides right on and stays in place with a silky matte finish that never feels dry. Now available in a range of fresh new hues, these playful pops of color are just what your spring wardrobe needs!",
+            "price": 8.00,
+            "category": 3,
+            "rating": 3.9,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2017/03/nyx_alabama_001_product.jpg",
+            "image": ""
+        }
+    },
+
+
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "l0000006",
+            "name": "Lip Junkie",
+            "brand": "Urban Decay",
+            "description": "A decadent lip gloss (with a delicious vanilla-mint flavor!) that allows you to get hooked on the shine, without the sticky hangover.You want a super-shiny gloss, but can't stand the sticky texture? Get your shine fix with Lip Junkie. The soft, cushiony texture goes on smoothly and stays put longer than other glosses. You also get a great color payout (sometimes hard to find in a gloss) and a range of amazing shades, including sheer, pretty neutrals, knockout brights, and a glimmering nearly black. The range of textures and shades will hook even the most jaded junkie. The key ingredient, Maxi-LipÃ¢â€žÂ¢, plumps the appearance of lips an average of 40% when used daily for a month. (Lip Junkie uses non-irritant plumpers, unlike other glosses that use stinging ingredients to inflame your lips.) The Maxi-Lip actually helps your lips become better defined, super-hydrated, and full. And the flavor? Think yummy wedding mints: a sweet vanilla mint with a little zing that makes breath feel fresh. What else you need to know:Debatably the most exciting part is the soft, angled tip that lays down a smooth, precise application and a molded (not crimped) tube. No more worrying about lip gloss explosions in your bag. The applicator tip is also molded to ensure a mess-free application. And the gorgeous cap looks like a stained glass window: metallic gunmetal over rich purple.",
+            "price": 13.99,
+            "category": 3,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "https://www.temptalia.com/wp-content/uploads/2013/01/urbandecay_flushed001.jpg"
+        }
+    },
+
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000001",
+            "name": "Bronzer/Blush Duo",
+            "brand": "Bobbi Brown",
+            "description": "Bobbi Brown Bronzer/Blush Duo is a Cheek Palette that retails for £36.00 and contains 0.34 oz.",
+            "price": 36.00,
+            "category": 4,
+            "rating": 4.3,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2012/08/bobbibrown_bahamapeony001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000002",
+            "name": "Highlighter & Blush",
+            "brand": "Chanel",
+            "description": "A trio of energising shades that can be worn individually or blended, designed to illuminate your face, warm up your complexion and bring out the colour in your cheeks. A sun-kissed healthy glow effect that lasts up to 8 hours, as if you had spent the day in the great outdoors. Flawless and tailor-made, all year round.",
+            "price": 55.00,
+            "category": 4,
+            "rating": 4.9,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2010/09/chanel_sohopalette001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000003",
+            "name": "Pressed Powder & Blush",
+            "brand": "Guerlain",
+            "description": "Guerlain Pressed Powder & Blush is a Highlighter that retails for £67.00 and contains 0.35 oz.",
+            "price": 67,
+            "category": 4,
+            "rating": 3.9,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2011/09/guerlain_paruredenuit001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000004",
+            "name": "DiorSkin Powder Blush",
+            "brand": "Dior",
+            "description": "Diorskin Powder Blush gives color to cheekbones, in a subtle way, resulting in a more harmonious complexion. A healthy distance from the air brush!",
+            "price": 34.99,
+            "category": 4,
+            "rating": 4.7,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/04/dior_coralglowparadiseduo008.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000005",
+            "name": "HD Studio Photogenic Grinding Blush",
+            "brand": "NYX",
+            "description": "This revolutionary HD Studio Photogenic Grinding Blush compact allows you to grind just enough mineral-enriched cheek color for one flawless application. The result is a finely-milled, high-definition blush that, once applied, deflects light, reduces the appearance of pores and smooths your complexion making you camera-ready in no time. The rest of your product remains fresh and uncontaminated. Available in 8 shades.",
+            "price": 25.99,
+            "category": 4,
+            "rating": 3.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2011/10/nyx_apricothdblush001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "c0000006",
+            "name": "Powder Blush Duo",
+            "brand": "MAC",
+            "description": "MAC Cosmetics Powder Blush builds with ease and consistency to touch your cheeks with a flush of natural colour.",
+            "price": 35.00,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/06/mac_hibiscuskiss001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000001",
+            "name": "Compact Mirror",
+            "brand": "Disney",
+            "description": "This is a beautiful compact mirror, that fits perfectly in your purse or handbag",
+            "price": 6.99,
+            "category": 5,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/06/disney_arielmirror001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000002",
+            "name": "Illustrated Bags",
+            "brand": "MAC",
+            "description": "MAC celebrates the anniversary of its limited-edition Illustrator Bags with new designs by two massive talents. Each artist draws on creativity with stunning originality, transforming MAC makeup bags into mini-masterpieces. Award-winning illustrator Anja Kroencke presents her imaginative vision through black and white line drawings of elegant feminine faces with elaborate wavy hair. New York City graffiti artist and modern Renaissance woman Indie 184 has tagged the bags with her vibrant graphic street style. Lined interiors in complementing patterns, top zipper closure and a looped-end handle. Bag lovers, enhance your collections.",
+            "price": 16.99,
+            "category": 5,
+            "rating": 4.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/06/mac_bag1anjakroencke001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000003",
+            "name": "Featherweight Luxe",
+            "brand": "T3",
+            "description": "This is a lightweight but powerful hair dryer.",
+            "price": 18.99,
+            "category": 5,
+            "rating": 4.7,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2013/06/t3_pinkluxe001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000004",
+            "name": "Sensor Mirror",
+            "brand": "Simple Human",
+            "description": "A stylish mirror that can be moved around with ease!",
+            "price": 30.00,
+            "category": 5,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2014/08/simplehuman_travelmirror001.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000005",
+            "name": "Face Wipes",
+            "brand": "MAC",
+            "description": "Swipes away makeup, smudges, dirt and grime, pronto! Oversized, luxurious, super-saturated with special MAC cleanser infused with protective vitamin E. Hydrates and nourishes highly efficiently. Extremely refreshing. Totally addictive. Slickly packed, re-sealable, ready to go!",
+            "price": 4.99,
+            "category": 5,
+            "rating": 3.8,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2014/01/mac_wipes.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "a0000006",
+            "name": "Slanted Soft-Touch Tweezers",
+            "brand": "Slice",
+            "description": "What do you get when you combine the design skills of famed architect Michael Graves, two years of testing and development, and collaboration with top industry professionals? The result is a tweezer experience like you've never had before. Perfectly aligned, hand-filed slanted tips plus a wide, comfortable patented grip for expert precision, every time. Also available in 100% stainless steel. Designed for Slice by Michael Graves.",
+            "price": 10.00,
+            "category": 5,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2014/01/slice_slanttip004.jpg",
+            "image": ""
+        }
+    },
+
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "s0000001",
+            "name": "Slanted Soft-Touch Tweezers",
+            "brand": "Slice",
+            "description": "What do you get when you combine the design skills of famed architect Michael Graves, two years of testing and development, and collaboration with top industry professionals? The result is a tweezer experience like you've never had before. Perfectly aligned, hand-filed slanted tips plus a wide, comfortable patented grip for expert precision, every time. Also available in 100% stainless steel. Designed for Slice by Michael Graves.",
+            "price": 10.00,
+            "category": 6,
+            "rating": 5,
+            "image_url": "https://www.temptalia.com/wp-content/uploads/2014/01/slice_slanttip004.jpg",
+            "image": ""
+        }
+    }
+]
