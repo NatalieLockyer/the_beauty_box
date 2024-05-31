@@ -19,6 +19,10 @@ header {
     font-weight: 700;
 }
 
+.bg-lilac {
+    background-color:#FFE6FF;
+}
+
 .banner {
     width: 100%;
     background-color: #333;
