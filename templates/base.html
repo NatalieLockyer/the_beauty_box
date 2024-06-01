@@ -3,133 +3,140 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        {% block meta %}
-        <meta http-equiv="X-UA-Compatable" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {% endblock %}
+<head>
+    <!-- Required meta tags -->
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatable" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
 
-        {% block extra_meta %}
-        {% endblock %}
+    {% block extra_meta %}
+    {% endblock %}
 
-        <!-- Bootstrap CSS -->
-        {% block corecss %}
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-        
-        {% endblock %}
+    <!-- Bootstrap CSS -->
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-        {% block extra_css %}
-        {% endblock %}
+    {% endblock %}
 
-        {% block corejs %}
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/3ad1443fbb.js" crossorigin="anonymous"></script>
-        {% endblock%}
+    {% block extra_css %}
+    {% endblock %}
 
-        {% block extra_js %}
-        {% endblock %}
+    {% block corejs %}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3ad1443fbb.js" crossorigin="anonymous"></script>
+    {% endblock%}
 
-        <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
-    </head>
-    <body>
-        <header class="container-fluid fixed-top">
-            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-4 my-auto 
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto 
                                 py-1 py-lg-0 text-center text-lg-left">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>
-                                The Beauty Box</strong></h2>
-                    </a>
-                    <hr>
-                </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
-                    <form method="GET" action="">
-                        <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
-                            <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                    <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </button>
-                            </div>
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0"><strong>
+                            The Beauty Box</strong></h2>
+                </a>
+                <hr>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
                         </div>
-                    </form>
-                </div>
-                <div class="col-12 col-lg-4 my-auto
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto
                                 py-1 py-lg-0 text-center text-lg-left">
-                    <ul class="list-inline list-unstyled text-center 
+                <ul class="list-inline list-unstyled text-center 
                                 text-lg-right my-0">
-                        <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" 
-                                data-toggle="dropdown" aria-haspopup="true" 
-                                    aria-expanded="false">
-                                <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu border-0" 
-                                aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
                             </div>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                    <p class="my-0">
-                                        {% if grand_total %}
-                                            £{{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                            £0.00
-                                        {% endif %}
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <!--Scrolling banner on nav bar -->
-            <div class="banner">
-                <div class="scrolling-text">
-                    <div class="text-item">FREE DELIVERY WHEN YOU SPEND £{{ free_shipping_threshold }} OR MORE!</div>
-                    <div class="text-item">NEW ARRIVALS COMING SOON!</div>
-                    <div class="text-item">SIGN UP NOW FOR 10% OF YOUR FIRST ORDER!</div>
-                </div>
+        <!--Scrolling banner on nav bar -->
+        <div class="banner">
+            <div class="scrolling-text">
+                <div class="text-item">FREE DELIVERY WHEN YOU SPEND £{{ free_shipping_threshold }} OR MORE!</div>
+                <div class="text-item">NEW ARRIVALS COMING SOON!</div>
+                <div class="text-item">SIGN UP NOW FOR 10% OF YOUR FIRST ORDER!</div>
             </div>
+        </div>
 
-            <div class="row bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/mobile-top-header.html' %}
-                    {% include 'includes/main-nav.html' %}
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
 
-                </nav>
-            </div>
-            
-            <!-- Highlights in the nav bar-->
-            <div class="row bg-lilac pt-lg-2 d-lg-flex">
+            </nav>
+        </div>
+
+        <!-- Highlights in the nav bar-->
+        <div class="row bg-lilac pt-lg-2 d-lg-flex">
                 <div class="col-12 my-auto py-1 py-lg-0">
                     <div class="highlight">
                         <div class="row justify-content-around align-items-center">
@@ -137,32 +144,38 @@
                                 <p class="font mt-4 mb-4"><span class="fas fa-truck"></span> FREE UK Delivery when you spend over £50</p>
                             </div>
                             <div class="col-lg-3 mb-3 text-center p-item">
-                                <p href="#" class="text-center mt-4 mb-4"><span class="fas fa-clock"></span> Fast Delivery</p>
+                                <p class="text-center mt-4 mb-4"><span class="fas fa-clock"></span> Fast Delivery</p>
                             </div>
                             <div class="col-lg-3 mb-3 text-center p-item">
-                                <p href="#" class="text-center mt-4 mb-4"><span class="fas fa-coins"></span> 10% off when you sign up</p>
+                                <p class="text-center mt-4 mb-4"><span class="fas fa-coins"></span> 10% off when you sign up</p>
                             </div>
                             <div class="col-lg-3 mb-3 text-center p-item">
-                                <p href="#" class="text-center mt-4 mb-4"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
+                                <p class="text-center mt-4 mb-4"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+       
+    </header>
 
-        {% if messages %}
-        <div class="message-container"></div>
-        {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
+    {% if messages %}
+    <div class="message-container"></div>
+    {% endif %}
 
-        {% block content %}
-        {% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-        {% block postloadjs %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-    </body>
+    {% block postloadjs %}
+    <script src="text/javascript">
+    const carousel = new bootstrap.Carousel('#myCarousel')
+    </script>
+    {% endblock %}
+
+</body>
+
 </html>
