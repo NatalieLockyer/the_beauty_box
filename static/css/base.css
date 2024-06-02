@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    /* background: url('/media/homepage_image.jpg') no-repeat center center fixed; */
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -36,6 +35,27 @@ header {
     text-align: center;
 }
 
+.p-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.p-inline p {
+    margin: 0 10px;
+}
+
+.carousel-indicators button {
+    height: 5px;
+    width: 2px;
+    border-radius: 75%;
+    background-color: white;
+}
+
+.carousel-indicators .active {
+    background-color: grey;
+}
+
 .scrolling-text {
     display: flex;
     animation: scroll 40s linear infinite;
@@ -66,12 +86,6 @@ header {
     background: white;
     z-index: -1;
 }
-
-
-.main_content {
-    margin-top: 313.89px;
-}
-
 
 /* from Bulma */
 .icon {
@@ -121,6 +135,17 @@ header {
 }
 
 /* -------------------------------- Media Queries */
+
+
+@media (max-width: 768px) {
+    .p-inline {
+        display: none;
+    }
+
+    .p-single {
+        display: block;
+    }
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

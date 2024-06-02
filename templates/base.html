@@ -47,19 +47,16 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto 
-                                py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>
-                            The Beauty Box</strong></h2>
+                    <h2 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h2>
                 </a>
                 <hr>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                 <form method="GET" action="">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
@@ -70,13 +67,10 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto
-                                py-1 py-lg-0 text-center text-lg-left">
-                <ul class="list-inline list-unstyled text-center 
-                                text-lg-right my-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -135,27 +129,36 @@
             </nav>
         </div>
 
-        <!-- Highlights in the nav bar-->
-        <div class="row bg-lilac pt-lg-2 d-lg-flex">
-                <div class="col-12 my-auto py-1 py-lg-0">
-                    <div class="highlight">
-                        <div class="row justify-content-around align-items-center">
-                            <div class="col-lg-3 mb-3 text-center p-item">
-                                <p class="font mt-4 mb-4"><span class="fas fa-truck"></span> FREE UK Delivery when you spend over £50</p>
-                            </div>
-                            <div class="col-lg-3 mb-3 text-center p-item">
-                                <p class="text-center mt-4 mb-4"><span class="fas fa-clock"></span> Fast Delivery</p>
-                            </div>
-                            <div class="col-lg-3 mb-3 text-center p-item">
-                                <p class="text-center mt-4 mb-4"><span class="fas fa-coins"></span> 10% off when you sign up</p>
-                            </div>
-                            <div class="col-lg-3 mb-3 text-center p-item">
-                                <p class="text-center mt-4 mb-4"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
-                            </div>
+        <!--Highlights Carousel-->
+        <div id="highlight-carousel" class="carousel slide p-4 bg-lilac w-100">
+            <div class="carousel-indicators p-2">
+                <button id="indicator" type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="3"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="p-inline">
+                                <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend over £50</p>
+                                <p class="text-center"><span class="fas fa-clock"></span> Fast Delivery</p>
+                                <p class="text-center"><span class="fas fa-coins"></span> 10% off when you sign up</p>
+                                <p class="text-center"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
+                            </div>    
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+
+
        
     </header>
 
@@ -171,9 +174,10 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script src="text/javascript">
-    const carousel = new bootstrap.Carousel('#myCarousel')
+    <script type="text/javascript">
+    const carousel = new bootstrap.Carousel('#higlight-carousel')    
     </script>
+    
     {% endblock %}
 
 </body>
