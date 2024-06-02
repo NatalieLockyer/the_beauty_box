@@ -20,6 +20,7 @@ header {
     background-color:#FFE6FF;
 }
 
+/* This is for the scrolling banner across the screen*/
 .banner {
     width: 100%;
     background-color: #333;
@@ -40,6 +41,7 @@ header {
 }
 
 .p-inline p {
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -137,22 +139,20 @@ header {
 }
 /* -------------------------------- Media Queries */
 
-
-@media (max-width: 768px) {
-    .p-inline {
-        display: none;
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 210px;
     }
 
-    .p-single {
+    body {
+        height: calc(100vh - 194px);
+    }
+
+    .p-inline p {
         display: block;
     }
-}
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -166,17 +166,17 @@ header {
     }
 
     .header-container {
-        padding-top: 265.39px;
+        padding-top: 289.39px;
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 218px;
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
     }
 
-    body {
-        height: calc(100vh - 194px);
+    .header-container {
+        padding-top: 265.39px;
     }
 }
