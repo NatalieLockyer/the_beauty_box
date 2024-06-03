@@ -58,7 +58,7 @@
                 <hr>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search">
@@ -158,16 +158,16 @@
         </div>
 
         <!-- Carousel for small screens -->
-        <div id="highlight-carousel-mobile" class="carousel slide p-4 bg-lilac w-100 d-block d-lg-none"
+        <div id="highlight-carousel-small" class="carousel slide p-4 bg-lilac w-100 d-block d-lg-none"
             data-bs-ride="carousel">
             <div class="carousel-indicators p-2">
-                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#highlight-carousel-small" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="1"
+                <button type="button" data-bs-target="#highlight-carousel-small" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="2"
+                <button type="button" data-bs-target="#highlight-carousel-small" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#highlight-carousel" data-bs-slide-to="3"
+                <button type="button" data-bs-target="#highlight-carousel-small" data-bs-slide-to="3"
                     aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
@@ -200,15 +200,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script>
-        // This is to initialize the carousel
-        var myCarouselMobile = document.querySelector('#highlight-carousel');
-        var carouselMobile = new bootstrap.Carousel(myCarouselMobile, {
-            interval: false,
-            wrap: true
-        });
-    </script>
-        {% endblock %} 
+    {% endblock %} 
 
     </body >
 </html >

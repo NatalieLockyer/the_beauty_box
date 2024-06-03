@@ -20,7 +20,17 @@ header {
     background-color:#FFE6FF;
 }
 
-/* This is for the scrolling banner across the screen*/
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+/* This is for the scrolling banner across the screen ------------*/
 .banner {
     width: 100%;
     background-color: #333;
@@ -34,6 +44,12 @@ header {
     text-align: center;
 }
 
+.scrolling-text {
+    display: flex;
+    animation: scroll 40s linear infinite;
+}
+
+/* This is for the carousel ------------------------ */
 .p-inline {
     display: flex;
     flex-wrap: wrap;
@@ -56,11 +72,6 @@ header {
     background-color: grey;
 }
 
-.scrolling-text {
-    display: flex;
-    animation: scroll 40s linear infinite;
-}
-
 .text-item {
     flex: none;
     white-space: nowrap;
@@ -77,17 +88,7 @@ header {
     }
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-}
-
-/* from Bulma */
+/* This is from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -137,9 +138,9 @@ header {
 .card {
     align-items: center;
 }
-/* -------------------------------- Media Queries */
+/* Media Queries ----------------------- */
 
-/* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 210px;
@@ -152,10 +153,9 @@ header {
     .p-inline p {
         display: block;
     }
-
 }
 
-/* fixed top navbar only on medium and up */
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -170,7 +170,7 @@ header {
     }
 }
 
-/* Slightly larger container on xl screens */
+
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
