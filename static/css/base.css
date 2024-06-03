@@ -30,6 +30,18 @@ header {
     z-index: -1;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* This is for the scrolling banner across the screen ------------*/
 .banner {
     width: 100%;
