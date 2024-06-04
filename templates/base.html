@@ -117,7 +117,7 @@
         <!--Scrolling banner on nav bar -->
         <div class="banner">
             <div class="scrolling-text">
-                <div class="text-item">FREE DELIVERY WHEN YOU SPEND £{{ free_shipping_threshold }} OR MORE!</div>
+                <div class="text-item">FREE SHIPPING WHEN YOU SPEND £{{ free_delivery_threshold }} OR MORE!</div>
                 <div class="text-item">NEW ARRIVALS COMING SOON!</div>
                 <div class="text-item">SIGN UP NOW FOR 10% OF YOUR FIRST ORDER!</div>
             </div>
@@ -143,11 +143,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="p-inline">
-                                <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you
-                                    spend over
-                                    £50</p>
-                                <p class="text-center"><span class="fas fa-clock"></span> Fast Delivery</p>
-                                <p class="text-center"><span class="fas fa-coins"></span> 10% off when you sign up</p>
+                                <p class="text-center"><span class="fas fa-truck"></span> FREE UK Shipping when you
+                                    spend £{{ free_delivery_threshold }} or more</p>
+                                <p class="text-center"><span class="fas fa-clock"></span> Super-Fast Shipping</p>
+                                <p class="text-center"><span class="fas fa-coins"></span> 10% off when you sign up!</p>
                                 <p class="text-center"><span class="fas fa-arrows-rotate"></span> Quick and easy returns
                                 </p>
                             </div>
@@ -172,7 +171,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend over £50
+                    <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend £{{ free_delivery_threshold }} or more
                     </p>
                 </div>
                 <div class="carousel-item">
