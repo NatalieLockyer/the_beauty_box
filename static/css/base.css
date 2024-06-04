@@ -17,7 +17,7 @@ header {
 }
 
 .bg-lilac {
-    background-color:#FFE6FF;
+    background-color:#F2D5DD;
 }
 
 .overlay {
@@ -119,7 +119,7 @@ header {
 }
 
 .shop-now-button {
-    background: black;
+    background: grey;
     color: white;
     min-width: 260px;
 }
@@ -129,13 +129,20 @@ header {
     color: white;
 }
 
+.btn-outline-pink:hover,
+.btn-outline-pink:active,
+.btn-outline-pink:focus {
+    background: #F2D5DD;
+    colour: white;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #F2D5DD;
     color: white;
 }
 
