@@ -43,8 +43,8 @@
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "sale items",
-            "friendly_name": "Sale Items"
+            "name": "sale",
+            "friendly_name": "Sale"
         }
     }
 ]
