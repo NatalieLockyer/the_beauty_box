@@ -44,6 +44,27 @@ header {
     cursor: pointer;
 }
 
+/*........Bootstap messages*/
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 9999999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.message-font {
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
 /* This is for the scrolling banner across the screen ------------*/
 .banner {
     width: 100%;
@@ -173,7 +194,6 @@ header {
         display: block;
     }
 }
-
 
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
