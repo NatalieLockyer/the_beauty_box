@@ -11,7 +11,7 @@ header {
     padding-bottom: 42px;
 }
 
-.highlight {
+.font {
     font-family: 'Raleway';
     font-weight: 700;
 }
@@ -44,7 +44,7 @@ header {
     cursor: pointer;
 }
 
-/*........Bootstap messages*/
+/*---------------Bootstap messages-------------*/
 .message-container {
     position: fixed;
     top: 80px;
@@ -62,10 +62,61 @@ header {
 
 .message-font {
     font-family: 'Raleway';
-    font-weight: 300;
+    font-weight: 400;
 }
 
-/* This is for the scrolling banner across the screen ------------*/
+/*--------Copied from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+.basket-container-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* -------------Convenience classes - colors copied from Bootstrap -----------*/
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+/* ----------------------This is for the scrolling banner across the screen ------------*/
 .banner {
     width: 100%;
     background-color: #333;
@@ -84,7 +135,7 @@ header {
     animation: scroll 40s linear infinite;
 }
 
-/* This is for the carousel ------------------------ */
+/*--------------------------This is for the carousel ------------------------ */
 .p-inline {
     display: flex;
     flex-wrap: wrap;
@@ -123,7 +174,7 @@ header {
     }
 }
 
-/* This is from Bulma */
+/* -----------------This is from Bulma--------------- */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -148,25 +199,30 @@ header {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background-color: black !important;
+    color: white !important;
+    border-color: black;
+}
+
+.btn-pink   {
+    background-color: #F2D5DD;
 }
 
 .btn-outline-pink:hover,
 .btn-outline-pink:active,
 .btn-outline-pink:focus {
-    background: #F2D5DD;
-    colour: white;
+    background: #F2D5DD !important;
+    colour: black;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #F2D5DD;
-    color: white;
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink:focus {
+    background: #F2D5DD !important;
+    color: black !important;
 }
 
 .text-black {
@@ -178,7 +234,7 @@ header {
 }
 
 
-/* Media Queries ----------------------- */
+/*------------------- Media Queries ----------------------- */
 
 
 @media (max-width: 991px) {
