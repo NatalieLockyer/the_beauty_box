@@ -37,6 +37,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!--Stripe payments-->
+    <script src="https://js.stripe.com/v3/"></script>
     
     {% endblock%}
 
@@ -58,10 +60,10 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                        <input class="form-control border border-pink rounded-0" type="text" name="q"
                             placeholder="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-pink border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-pink border border-pink rounded-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
