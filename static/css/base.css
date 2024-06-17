@@ -193,8 +193,8 @@ header {
 }
 
 .shop-now-button {
-    background: grey;
-    color: white;
+    background: #F2D5DD;
+    color: black;
     min-width: 260px;
 }
 
@@ -205,14 +205,18 @@ header {
 }
 
 .btn-pink   {
-    background-color: #F2D5DD;
+    background-color: #F2D5DD; !important
+    color: black !important;
+    border-color: #F2D5DD;
+    
 }
 
 .btn-outline-pink:hover,
 .btn-outline-pink:active,
 .btn-outline-pink:focus {
     background: #F2D5DD !important;
-    color: black;
+    border-color: #F2D5DD;
+    color:black;
 }
 
 .shop-now-button:hover,
