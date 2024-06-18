@@ -205,8 +205,8 @@ header {
 }
 
 .btn-pink   {
-    background-color: #F2D5DD; !important
-    color: black !important;
+    background-color: #F2D5DD;
+    color: black;
     border-color: #F2D5DD;
     
 }
@@ -214,7 +214,7 @@ header {
 .btn-outline-pink:hover,
 .btn-outline-pink:active,
 .btn-outline-pink:focus {
-    background: #F2D5DD !important;
+    background: #F2D5DD;
     border-color: #F2D5DD;
     color:black;
 }
@@ -225,8 +225,8 @@ header {
 .btn-pink:hover,
 .btn-pink:active,
 .btn-pink:focus {
-    background: #F2D5DD !important;
-    color: black !important;
+    background: #F2D5DD;
+    color: black;
 }
 
 .text-black {
