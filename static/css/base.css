@@ -136,6 +136,7 @@ header {
 }
 
 /*--------------------------This is for the carousel ------------------------ */
+
 .p-inline {
     display: flex;
     flex-wrap: wrap;
@@ -148,7 +149,7 @@ header {
 }
 
 .carousel-indicators button {
-    height: 5px;
+    height: 2px;
     width: 2px;
     border-radius: 75%;
     background-color: white;
@@ -255,19 +256,18 @@ header {
     }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
-    }
+    } */
 
     .header-container {
         padding-top: 289.39px;
     }
-}
 
 
 @media (min-width: 1200px) {
