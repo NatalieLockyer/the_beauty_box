@@ -198,7 +198,7 @@ input[name='q']::placeholder {
 }
 
 .shop-now-button {
-    background: #F2D5DD;
+    background-color: #F2D5DD;
     color: black;
     min-width: 260px;
 }
@@ -209,7 +209,7 @@ input[name='q']::placeholder {
     border-color: black;
 }
 
-.btn-pink   {
+.btn-pink {
     background-color: #F2D5DD;
     color: black;
     border-color: #F2D5DD;
@@ -267,7 +267,7 @@ input[name='q']::placeholder {
 	/* button */
 	display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
