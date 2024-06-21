@@ -7,6 +7,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 
+import stripe
 import json
 import time
 
@@ -17,14 +18,14 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def send_confirmation_email(self, order):
+    def _send_confirmation_email(self, order):
         """ Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
-            'checkout/confimation_emails/confirmation_email_subject.txt',
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
-            'checkout/confimation_emails/confirmation_email_body.txt',
+            'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
         
         send_mail(
@@ -45,13 +46,11 @@ class StripeWH_Handler:
         """ Handle they payment_intent.succeeded webhook from stripe """
         intent = event.data.object
         pid = intent.id
-        basket = intent.metadata.bag
+        basket = intent.metadata.basket
         save_info = intent.metadata.save_info
 
         # Get the Charge object
-        stripe_charge = stripe.Charge.retrieve(
-            intent.latest_charge
-        )
+        stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
         
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
