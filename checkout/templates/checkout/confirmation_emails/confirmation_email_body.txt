@@ -1,0 +1,22 @@
+Hey {{ order.full_name }}!
+
+This is confirmation of your order with The Beauty Box. The details of your order are listed below.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Your order will be shipped out to your designated address {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.postcode }}.
+
+The number we have for you is {{ order.phone_number }}.
+
+We hope you will be happy with your order! If you have any questions, please feel free to contact the team at {{ contact_email }}
+
+Thank you for you order and we look forward to doing business with you again real soon!
+
+Sincerely,
+
+The Beauty Box
