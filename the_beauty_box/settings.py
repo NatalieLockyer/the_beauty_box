@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
+    'tutorials',
+    'beauty_blogs',
 
     # Other apps
     'crispy_forms'
@@ -128,6 +130,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com",
+]
 
 
 # Password validation
