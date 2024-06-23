@@ -6,6 +6,7 @@ class TutorialAdmin(admin.ModelAdmin):
         'title',
         'rating',
         'video',
+        'video_url',
     )
 
     ordering = ('rating',)
