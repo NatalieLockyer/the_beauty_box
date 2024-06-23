@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'tutorials',
 
     # Other apps
-    'crispy_forms'
+    'crispy_forms',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [

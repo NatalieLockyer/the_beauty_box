@@ -29,12 +29,12 @@
                 {% if tutorial.video %}
                 <a href="{% url 'tutorial_detail' tutorial.id %}">
                     <img class="card-img-top img-fluid" src="{{ tutorial.image.url }}" alt="{{ tutorial.title }}"
-                        style="width: 225px; height: 225px; object-fit: cover;">
+                        style="width: 250px; height: 225px; ">
                 </a>
                 {% else %}
                 <a href="{% url 'tutorial_detail' tutorial.id %}">
                     <img class="card-img-top img-fluid" src="{{ MEDIAL_URL }}" alt="{{ tutorial.title }}"
-                        style="width: 225px; height: 225px; object-fit: cover;">
+                        style="width: 250px; height: 225px;">
                 </a>
                 {% endif %}
                 <div class="card-body pb-2">
@@ -51,6 +51,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
