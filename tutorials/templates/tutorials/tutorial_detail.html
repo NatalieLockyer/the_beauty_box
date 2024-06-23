@@ -18,12 +18,12 @@
                 {% if tutorial.video %}
                 <a href="{{ tutorial.video.url }}" target="_blank">
                     <video class="card-img-top img-fluid" src="{{ tutorial.video.url }}" alt="{{ tutorial.title }}"
-                        style="width: 200px; height: 200px; object-fit: cover;" controls></video>
+                        style="width: 400px; height: 400px; object-fit: cover;" controls></video>
                 </a>
                 {% else %}
                 <a href="">
                     <video class="card-image-top img-fluid" src="{% static 'noimage.png' %}" alt="{{ tutorial.title }}"
-                        style="width: 220px; height: 220px; object-fit: cover;" controls></video>
+                        style="width: 400px; height: 400px; object-fit: cover;" controls></video>
                 </a>
                 {% endif %}
             </div>

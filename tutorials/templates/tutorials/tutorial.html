@@ -14,23 +14,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <h2 class="logo-font">Beauty Tutorials</h2>
             <hr class="w-50 mb-1">
+            <p class="font p-4">Welcome to our Beauty Tutorial Page. Here you will find the latest trends within the makeup industry.<br> 
+                If you would like to see more, or would like to add suggestions to our next video, get in touch on our contact page.
+            </p>
         </div>
     </div>
-    <div class="row">
+
+    <div class="row p-5">
         {% for tutorial in tutorials %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card h-100 border-0">
                 {% if tutorial.video %}
                 <a href="{% url 'tutorial_detail' tutorial.id %}">
-                    <video class="card-img-top img-fluid" src="{{ tutorial.video }}" alt="{{ tutorial.title }}"
-                        style="width: 200px; height: 200px; object-fit: cover;" controls></video>
+                    <img class="card-img-top img-fluid" src="{{ tutorial.image.url }}" alt="{{ tutorial.title }}"
+                        style="width: 225px; height: 225px; object-fit: cover;">
                 </a>
                 {% else %}
                 <a href="{% url 'tutorial_detail' tutorial.id %}">
-                    <video class="card-img-top img-fluid" src="{% static 'noimage.png' %}" alt="{{ tutorial.title }}"
-                        style="width: 220px; height: 220px; object-fit: cover;" controls></video>
+                    <img class="card-img-top img-fluid" src="{{ MEDIAL_URL }}" alt="{{ tutorial.title }}"
+                        style="width: 225px; height: 225px; object-fit: cover;">
                 </a>
                 {% endif %}
                 <div class="card-body pb-2">
