@@ -216,18 +216,18 @@ input[name='q']::placeholder {
 }
 
 .btn-pink {
-    background-color: #F2D5DD;
-    color: black;
-    border-color: #F2D5DD;
+    background-color: #F2D5DD !important;
+    color: black !important;
+    border-color: #F2D5DD !important;
     
 }
 
 .btn-outline-pink:hover,
 .btn-outline-pink:active,
 .btn-outline-pink:focus {
-    background: #F2D5DD;
-    border-color: #F2D5DD;
-    color:black;
+    background: #FFD2D3 !important;
+    border-color: #FFD2D3 !important;
+    color:black !important;
 }
 
 .shop-now-button:hover,
@@ -236,8 +236,8 @@ input[name='q']::placeholder {
 .btn-pink:hover,
 .btn-pink:active,
 .btn-pink:focus {
-    background: #F2D5DD;
-    color: black;
+    background: #FFD2D3 !important;
+    color: black !important;
 }
 
 .text-black {
