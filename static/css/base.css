@@ -20,6 +20,12 @@ header {
     background-color:#F2D5DD;
 }
 
+.homepage-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
 .overlay {
     height: 100%;
     width: 100%;

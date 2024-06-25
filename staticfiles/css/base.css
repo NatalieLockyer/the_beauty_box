@@ -1,0 +1,366 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+header {
+    padding-bottom: 42px;
+}
+
+.font {
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+.bg-lilac {
+    background-color:#F2D5DD;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/*---------------Bootstap messages-------------*/
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 9999999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.message-font {
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+
+/*--------Copied from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+.basket-container-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* -------------Convenience classes - colors copied from Bootstrap -----------*/
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+/* ----------------------This is for the scrolling banner across the screen ------------*/
+.banner {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.scrolling-text {
+    display: flex;
+    animation: scroll 40s linear infinite;
+}
+
+/*--------------------------This is for the carousel ------------------------ */
+
+.p-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.p-inline p {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.carousel-indicators button {
+    height: 2px;
+    width: 2px;
+    border-radius: 75%;
+    background-color: white;
+}
+
+.carousel-indicators .active {
+    background-color: grey;
+}
+
+.text-item {
+    flex: none;
+    white-space: nowrap;
+    padding-right: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/* -----------------This is from Bulma--------------- */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    font-family: 'Raleway';
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background-color: #F2D5DD;
+    color: black;
+    min-width: 260px;
+}
+
+.btn-black {
+    background-color: black !important;
+    color: white !important;
+    border-color: black;
+}
+
+.btn-pink {
+    background-color: #F2D5DD;
+    color: black;
+    border-color: #F2D5DD;
+    
+}
+
+.btn-outline-pink:hover,
+.btn-outline-pink:active,
+.btn-outline-pink:focus {
+    background: #F2D5DD;
+    border-color: #F2D5DD;
+    color:black;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink:focus {
+    background: #F2D5DD;
+    color: black;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* Allauth form formatting*/
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #F2D5DD;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* button */
+	display: inline-block;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #F2D5DD;
+    border: 1px solid #F2D5DD;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap button transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #F2D5DD;
+    border-color: #F2D5DD;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+/* -----------------Product Form -------------------------- */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/*------------------- Media Queries ----------------------- */
+
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 210px;
+    }
+
+    body {
+        height: calc(100vh - 194px);
+    }
+
+    .p-inline p {
+        display: block;
+    }
+}
+
+/* @media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    } */
+
+    .header-container {
+        padding-top: 289.39px;
+    }
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .header-container {
+        padding-top: 265.39px;
+    }
+}

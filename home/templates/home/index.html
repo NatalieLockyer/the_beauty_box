@@ -12,7 +12,7 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-7 cold-md-6 my-auto">
+            <div class="col-12 col-md-6 my-auto">
                 <div class="my-5">
                     <h4>
                         <a href="{% url 'products' %}" 
@@ -34,6 +34,9 @@
                         </a>
                     </h4>
                 </div>
+            </div>
+            <div class="col-12 col-md-6 my-auto homepage-image">
+                <img class="img-fluid" src="{% static 'images/homepage_image.jpg' %}" alt="">
             </div>
         </div>
     </div>
