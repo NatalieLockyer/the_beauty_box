@@ -17,22 +17,23 @@
         <div class="col text-center mt-3">
             <h2 class="logo-font">Contact Us Page</h2>
             <hr class="w-50 mb-1">
-                <p class="font"><small>If you would like to get in touch with any of The Beauty Box team, <br>
+            <p class="font"><small>If you would like to get in touch with any of The Beauty Box team, <br>
                     Would like to become a brand ambassador, or think we should collaborate <br>
-                Please fill in the below form and we will aim to get back to you within 24 hours.</small></p>        
+                    Please fill in the below form and we will aim to get back to you within 24 hours.</small></p>
         </div>
     </div>
-                
-<!-- Collaboration Form -->
-        <form method="POST">
-            {% csrf_token %}
-            {{ collaboration_request | crispy }}
-            <button type="submit" class="btn btn-pink font btn-lg">Submit</button>
-        </form>
 
+    <!-- Collaboration Form -->
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <form method="POST">
+                {% csrf_token %}
+                {{ collaboration_form | crispy }}
+                <div class="text-center">            
+                    <button type="submit" class="btn btn-pink font btn-lg">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-{% endblock %}
-
-
-
- 
+    {% endblock %}

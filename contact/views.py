@@ -1,21 +1,26 @@
-from django.shortcuts import render
-from .forms import CollaborationRequestForm
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import CollaborationForm
 
 def contact(request):
-    return render(request, 'contact/contact.html')
-
-
-def collaboration_request(request):
     if request.method == 'POST':
-        form = CollaborationRequestForm(request.POST)
-        if form.is_valid():
-            form.save()
+        collaboration_form = CollaborationForm(data=request.POST)
+        if collaboration_form.is_valid():
+            collaboration_form.save()
             messages.success(request, 'Your message request has been submitted successfully! \
                 We aim to get back to you within 24 hours')
-            return redirect('collaboration_request')
+            return redirect('contact')
         else:
             messages.error(request, 'Failed to send, Please check the form is valid and try again.')
     else:
-        form = CollaborationRequestForm()
+        collaboration_form = CollaborationForm()
     
-    return render(request, 'collaboration_request.html', {'form': form})
+    return render(request, 
+    "contact/contact.html",
+    {
+        "contact": contact,
+        "collaboration_form": collaboration_form},
+    )
+
+
+   
