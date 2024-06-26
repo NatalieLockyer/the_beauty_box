@@ -19,8 +19,6 @@ def contact(request):
     "contact/contact.html",
     {
         "contact": contact,
-        "collaboration_form": collaboration_form},
+        "collaboration_form": collaboration_form,
+        "on_contact_page": True },
     )
-
-
-   
