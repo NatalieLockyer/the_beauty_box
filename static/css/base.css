@@ -332,24 +332,30 @@ input[name='q']::placeholder {
 
 /* Footer */
 
-footer p {
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #F2D5DD !important;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
 .footer-container {
-    background-color: #F2D5DD;
-    height: 50px;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center; 
     width: 100%;
 }
 
 #social-media {
     text-align: center;
-    padding: 10px 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
+    width: 100%;
 }
 
 #social-media li {
@@ -361,8 +367,10 @@ footer p {
 }
 
 .copyright {
+    background-color: #F2D5DD;
     text-align: center;
-    margin: 5px 0 0 0;
+    margin: 10px 0 0 0;
+    width: 100%;
 }
 /*------------------- Media Queries ----------------------- */
 
