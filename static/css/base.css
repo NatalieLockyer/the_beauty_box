@@ -330,6 +330,40 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* Footer */
+
+footer p {
+    background-color: #F2D5DD !important;
+}
+
+.footer-container {
+    background-color: #F2D5DD;
+    height: 50px;
+    align-content: center;
+    width: 100%;
+}
+
+#social-media {
+    text-align: center;
+    padding: 10px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+}
+
+#social-media li {
+    font-size: 20px;
+}
+
+#social-media a {
+    color: black;
+}
+
+.copyright {
+    text-align: center;
+    margin: 5px 0 0 0;
+}
 /*------------------- Media Queries ----------------------- */
 
 
