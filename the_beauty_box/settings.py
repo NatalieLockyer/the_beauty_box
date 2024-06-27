@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'tutorials',
     'contact',
     'error',
+    'help',
 
     # Other apps
     'crispy_forms',
