@@ -2,9 +2,13 @@ html {
     height: 100%;
 }
 
-body {
+body, html {
     background-size: cover;
     height: calc(100vh - 164px);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -18,12 +22,24 @@ header {
 
 .bg-lilac {
     background-color:#F2D5DD;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.image-container {
+    max-width: 600px;
+    max-height: 350px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .homepage-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    margin-top: 10px;  
 }
 
 .overlay {
@@ -158,11 +174,17 @@ input[name='q']::placeholder {
     margin: 0 10px;
 }
 
+#highlight-carousel-small {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
 .carousel-indicators button {
-    height: 2px;
-    width: 2px;
-    border-radius: 75%;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
     background-color: white;
+    border: none;
 }
 
 .carousel-indicators .active {
@@ -373,6 +395,21 @@ footer {
     width: 100%;
 }
 /*------------------- Media Queries ----------------------- */
+
+@media (min-width: 768px) {
+    .col-md-6.text-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .my-5 {
+        margin-bottom: 0; 
+    }
+
+}
 
 
 @media (max-width: 991px) {
