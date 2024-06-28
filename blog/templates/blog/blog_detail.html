@@ -48,28 +48,61 @@
                 </a></button>
         </div>
     </div>
+    <hr>
 
+    <!-- Displaying approved comments -->
+    <div class="comment-container">
+        <div class="row">
+            <!-- Comments Section -->
+            <div class="col-md-8 card mb-1 mt-1">
+                <h4 class="logo-font"><u>Comments:</u></h4>
+                <div class="card-body">
+                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                    {% for comment in comments %}
+                    <div class="p-2 comments
+                {% if not comment.approved and comment.author == user %}
+                faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font">{{ comment.author }}
+                            <span class="font">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        <div class="font" id="comment{{ comment.id }}">
+                            {{ comment.body | linebreaks }}
+                        </div>
+                        {% if not comment.approved and comment.author == user %}
+                        <p class="approval font">
+                            This comment is awaiting approval
+                        </p>
+                        {% endif %}
+                        {% if user.is_authenticated and comment.author == user %}
+                        <button class="btn btn-pink" comment_id="{{ comment.id }}">Delete</button>
+                        <button class="btn btn-pink" comment_id="{{ comment.id }}">Edit</button>
+                        {% endif %}
+                    </div>
+                    <!-- Our for loop ends here -->
+                    {% endfor %}
+                </div>
+            </div>
 
-     <!-- Creating New Comment for individual blogs -->
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-12 col-md-4 card mb-4 mt-3">
-                <div class="comment-body">
-                    {% if user.is_authenticated %}
-                    <h3 class="logo-font">Leave a comment:</h3>
-                    <p class="font"><small>Posting as: {{ user.username }}</small></p>
-                    <form class="font" id="commentForm" method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button class="btn btn-pink rounded-0" type="submit">Submit</button>
-                    </form>
-                    {% else %}
-                    <p>Log in to leave a comment</p>
-                    {% endif %}
+        <!-- Creating New Comment for individual blogs -->
+        <div class="col-12 col-md-4">
+                <div class="card mb-1 mt-1">
+                    <div class="comment-body w-100">
+                        {% if user.is_authenticated %}
+                        <h4 class="logo-font text-center"><u>Leave a comment:</u></h4>
+                        <p class="font text-center"><small>Posting as: {{ user.username }}</small></p>
+                        <form class="font text-center" id="commentForm" method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button class="btn btn-pink rounded-0" type="submit">Submit</button>
+                        </form>
+                        {% else %}
+                        <p>Log in to leave a comment</p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
-{% endblock %}
+    {% endblock %}

@@ -325,8 +325,9 @@ input[name='q']::placeholder {
 }
 
 /* -----------------Comment Section-------------------------- */
-.comment-body {
-    border-color: #F2D5DD;
+.comment-container {
+    border: 2px solid #F2D5DD;
+    padding: 15px;
 }
 
 /* -----------------Product Form -------------------------- */
