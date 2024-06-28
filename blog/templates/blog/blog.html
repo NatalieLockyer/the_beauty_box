@@ -44,14 +44,14 @@
                             {% if blog.rating %}
                             <small class="text-muted font"><i class="fas fa-star mr-1"></i>{{ blog.rating }} / 5</small>
                             {% else %}
-                            <small class="text-muted">This tutorial has not yet been rated</small>
+                            <small class="text-muted">This blog has not yet been rated</small>
                             {% endif %}
-                            <!-- {% if request.user.is_superuser %}
+                            {% if request.user.is_superuser %}
                                             <small class="ml-1">
-                                                <a href="{% url 'edit_tutorial' tutorial.id %}">Edit</a>  |
-                                                <a class="text-danger" href="{% url 'delete_tutorial' tutorial.id %}">Delete</a>
+                                                <a href="{% url 'edit_blog' blog.id %}">Edit</a>  |
+                                                <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
                                             </small>
-                                        {% endif %} -->
+                                        {% endif %}
                         </div>
                     </div>
                 </div>
