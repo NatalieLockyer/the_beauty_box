@@ -20,38 +20,38 @@
         </div>
     </div>
 
-    <!-- <div class="row p-5">
-        {% for tutorial in tutorials %}
+    <div class="row p-5">
+        {% for blog in blogs %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card h-100 border-0">
-                {% if tutorial.video %}
-                <a href="{% url 'tutorial_detail' tutorial.id %}">
-                    <img class="card-img-top img-fluid" src="{{ tutorial.image.url }}" alt="{{ tutorial.title }}"
+                {% if blog.image %}
+                <a href="{% url 'blog_detail' blog.id %}">
+                    <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}"
                         style="width: 300px; height: 225px; ">
                 </a>
                 {% else %}
-                <a href="{% url 'tutorial_detail' tutorial.id %}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIAL_URL }}noimage.png" alt="{{ tutorial.title }}"
+                <a href="{% url 'blog_detail' blog.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIAL_URL }}noimage.png" alt="{{ blog.title }}"
                         style="width: 300px; height: 225px;">
                 </a>
                 {% endif %}
                 <div class="card-body mt-4 p-0 text-center">
-                    <p class="mb-0 logo-font text-left">{{ tutorial.title }}</p>
+                    <p class="mb-0 logo-font text-left">{{ blog.title }}</p>
                 </div>
                 <div class="card-footer bg-white mt-4 p-0 border-0 text-left">
                     <div class="row">
                         <div class="col">
-                            {% if tutorial.rating %}
-                            <small class="text-muted font"><i class="fas fa-star mr-1"></i>{{ tutorial.rating }} / 5</small>
+                            {% if blog.rating %}
+                            <small class="text-muted font"><i class="fas fa-star mr-1"></i>{{ blog.rating }} / 5</small>
                             {% else %}
                             <small class="text-muted">This tutorial has not yet been rated</small>
                             {% endif %}
-                            {% if request.user.is_superuser %}
+                            <!-- {% if request.user.is_superuser %}
                                             <small class="ml-1">
                                                 <a href="{% url 'edit_tutorial' tutorial.id %}">Edit</a>  |
                                                 <a class="text-danger" href="{% url 'delete_tutorial' tutorial.id %}">Delete</a>
                                             </small>
-                                        {% endif %}
+                                        {% endif %} -->
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
         </div>
         {% endif %}
         {% endfor %}
-    </div> -->
+    </div>
 </div>
 {% endblock %}
 
