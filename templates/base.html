@@ -88,6 +88,8 @@
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             <a href="{% url 'add_tutorial' %}" class="dropdown-item">Tutorial Management</a>
+                            <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'help' %}" class="dropdown-item">Help</a>
