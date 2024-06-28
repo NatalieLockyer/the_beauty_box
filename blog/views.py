@@ -1,6 +1,7 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.utils.safestring import mark_safe
 
 from .models import Blog, Comment
@@ -43,6 +44,28 @@ def blog_detail(request, blog_id):
         'comment_form': comment_form,
         'comment_count': comment_count}, 
         )
+
+
+# def comment_edit(request, slug, comment_id):
+#     """ A view to edit comments """
+
+#     if request.method == 'POST':
+
+#         blog = get_object_or_404(slug=slug)
+#         comment = get_object_or_404(Comment, pk=comment_id)
+#         comment_form = CommentForm(data=request.POST, instance=comment)
+
+#         if comment_form.is_valid() and comment.author == request.user:
+#             comment = comment_form.save(commit=False)
+#             comment.blog = blog
+#             comment.approved = False
+#             comment.save()
+#             messages.success(request, 'Your comment has been updated')
+#         else:
+#             messages.error(request, 'There has been an error updating your comment!')
+
+#     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 @login_required
 def add_blog(request):
