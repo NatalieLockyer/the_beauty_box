@@ -324,6 +324,11 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+/* -----------------Comment Section-------------------------- */
+.comment-body {
+    border-color: #F2D5DD;
+}
+
 /* -----------------Product Form -------------------------- */
 
 .btn-file {
