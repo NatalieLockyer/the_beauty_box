@@ -91,6 +91,14 @@ input[name='q']::placeholder {
     font-weight: 400;
 }
 
+.bg-return {
+    background-color: #E5E4E2;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border: 2px;
+    border-color: #E5E4E2;
+}
+
 /*--------Copied from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;

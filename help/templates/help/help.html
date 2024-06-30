@@ -14,11 +14,73 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Help</h2>
+            <h2 class="logo-font">Help Page</h2>
             <hr class="w-50 mb-1">
-            <p class="font p-4">For help with returns - delivery times .................. <br>
-                <a class="font btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0" href="{% url 'home' %}">Homepage</a>          
+            <p class="font p-4">Welcome to the help page, you will find details of returns, delivery details and our
+                privacy policy on here.<br>
+                For anything else, please contact The Beauty Box team via our <a href="{% url 'contact' %}">Contact
+                    Page</a>
+                <hr>
         </div>
     </div>
+
+    <div class="container-fluid bg-return py-4">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="logo-font text-center mt-4"><u>Returns</u></h3>
+                <p class="font text-center"><small>Follow these simply steps in how to return your items.</small></p>
+                <ul class="d-flex flex-column flex-md-row list-unstyled justify-content-around">
+                    <li class="text-center mt-3 mb-4 mb-md-0">
+                        <span class="fas fa-paper-plane fa-2x mb-2"></span>
+                        <p class="font">Register your return with us</p>
+                    </li>
+                    <li class="text-center mt-3 mb-4 mb-md-0">
+                        <span class="fas fa-box fa-2x mb-2"></span>
+                        <p class="font">Post your return</p>
+                    </li>
+                    <li class="text-center mt-3 mb-4 mb-md-0">
+                        <span class="fas fa-user fa-2x mb-2"></span>
+                        <p class="font">Once we have recieved your <br> return we will send you refund</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid bg-return py-4">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="logo-font text-center mt-4"><u>Delivery Information</u></h3>
+                <p class="font text-center mt-4"><small>UK Delivery Information</small></p>
+                <hr>
+                <h4 class="logo-font text-center mt-4">Premier Delivery - only £10 per year!</h4>
+                <p class="font text-center mt-2">
+                    <li class="font text-center mt-2">Do you want your deliveries there the next day? For 7 days a week?</li>
+                    <li class="font text-center mt-2">Why not sign up to our Premier Delivery for only £10.00.</li>
+                    <li class="font text-center mt-2">Giving you *12* Months of *NEXT DAY DELIVERY*.</li>
+                </p>
+                <hr>
+                <h4 class="logo-font text-center mt-4">Tracked Delivery - £3.95 or FREE on orders over £20.</h4>
+                <p class="font text-center mt-2">
+                    <li class="font text-center mt-2">Please allow 2-3 days for delivery.</li>
+                    <li class="font text-center mt-2">Delivers will take place 7 days a week.</li>
+                </p>
+                <hr>
+                <h4 class="logo-font text-center mt-4">Next Day Delivery - £5.95</h4>
+                <p class="font text-center mt-2">
+                    <li class="font text-center mt-2">Next day delivery for orders placed before 10pm.</li>
+                    <li class="font text-center mt-2">Delivers will take place 7 days a week</li>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<a class="font btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0" href="{% url 'home' %}">Homepage</a>
 
 {% endblock %}
