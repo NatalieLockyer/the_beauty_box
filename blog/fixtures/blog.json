@@ -4,7 +4,7 @@
         "model": "blog.blog",
         "fields": {
             "title": "New Blog",
-            "author": 3,
+            "author": 8,
             "content": "Testing the new blog",
             "image_url": "",
             "image": "",
