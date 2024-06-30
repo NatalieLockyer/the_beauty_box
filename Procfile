@@ -1,0 +1,1 @@
+web: gunicorn the_beauty_box.wsgi:application
