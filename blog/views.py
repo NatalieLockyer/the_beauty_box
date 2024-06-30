@@ -45,26 +45,47 @@ def blog_detail(request, blog_id):
         'comment_count': comment_count}, 
         )
 
+@login_required
+def comment_edit(request, blog_id, comment_id):
+    """ A view for users to edit their comments """
 
-# def comment_edit(request, slug, comment_id):
-#     """ A view to edit comments """
+    blog = get_object_or_404(Blog, pk=blog_id)
+    comment = get_object_or_404(Comment, pk=comment_id)
 
-#     if request.method == 'POST':
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST, instance=comment)
 
-#         blog = get_object_or_404(slug=slug)
-#         comment = get_object_or_404(Comment, pk=comment_id)
-#         comment_form = CommentForm(data=request.POST, instance=comment)
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.blog = blog
+            comment.save()
+            messages.success(request, 'Your comment has been updated')
+            return redirect('blog_detail', blog_id=blog_id)
+        else:
+            messages.error(request, 'There has been an error updating your comment')
+    
+    comment_form = CommentForm(instance=comment)
+    return render(request, 'blog/comment_edit.html', {
+        'comment_form': comment_form,
+        'blog': blog,
+        'comment': comment,
+        })
 
-#         if comment_form.is_valid() and comment.author == request.user:
-#             comment = comment_form.save(commit=False)
-#             comment.blog = blog
-#             comment.approved = False
-#             comment.save()
-#             messages.success(request, 'Your comment has been updated')
-#         else:
-#             messages.error(request, 'There has been an error updating your comment!')
 
-#     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+@login_required
+def comment_delete(request, blog_id, comment_id):
+    """ A view so users can delete their comments"""
+
+    blog = get_object_or_404(Blog, pk=blog_id) 
+    comment = get_object_or_404(Comment, pk=comment_id, blog=blog)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.success(request, 'Your comment has been deleted')
+    else:
+        messages.error(request, 'There has been an error deleting your comment, please try again')
+
+    return HttpResponseRedirect(reverse('blog_detail', args=[blog_id]))
 
 
 @login_required

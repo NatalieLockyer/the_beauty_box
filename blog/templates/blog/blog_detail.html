@@ -76,8 +76,8 @@
                         </p>
                         {% endif %}
                         {% if user.is_authenticated and comment.author == user %}
-                        <button class="btn btn-pink" comment_id="{{ comment.id }}">Edit</button>
-                        <button class="btn btn-danger" comment_id="{{ comment.id }}">Delete</button>
+                        <a href="{% url 'comment_edit' blog.id comment.id %}" class="btn btn-pink">Edit</a>
+                        <a href="{% url 'comment_delete' blog.id comment.id %}" class="btn btn-danger">Delete</a>
                         {% endif %}
                     </div>
                     <!-- Our for loop ends here -->

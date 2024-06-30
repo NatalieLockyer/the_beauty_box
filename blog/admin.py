@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Blog, Comment
+
+
 class BlogAdmin(SummernoteModelAdmin):
     list_display = (
         'title',
@@ -18,6 +20,13 @@ class BlogAdmin(SummernoteModelAdmin):
 
     ordering = ('title',)
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = (
+        'author',
+        'body',
+        'approved',
+    )
+
 
 admin.site.register(Blog, BlogAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)
