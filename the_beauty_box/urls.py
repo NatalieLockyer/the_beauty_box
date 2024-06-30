@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('error/', include('error.urls')),
     path('help/', include('help.urls')),
+    path('privacy/', include('privacy.urls')),
     path('products/', include('products.urls')),
     path('profile/', include('profiles.urls')),
     path('summernote/', include('django_summernote.urls')),
