@@ -18,12 +18,12 @@
                 {% if blog.image %}
                 <a href="{{ blog.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}"
-                        style="width: 350px; height: 350px; object-fit: cover;">
+                        style="width: 350px; height: 400px; object-fit: cover;">
                 </a>
                 {% else %}
                 <a href="">
                     <img class="card-image-top img-fluid" src="{% static 'noimage.png' %}" alt="{{ blog.title }}"
-                        style="width: 350px; height: 350px; object-fit: cover;">
+                        style="width: 350px; height: 400px; object-fit: cover;">
                 </a>
                 {% endif %}
             </div>
@@ -98,7 +98,7 @@
                             <button class="btn btn-pink rounded-0" type="submit">Submit</button>
                         </form>
                         {% else %}
-                        <p>Log in to leave a comment</p>
+                        <p><a href="{% url 'account_login' %}"></a>Log in to leave a comment</a></p>
                         {% endif %}
                     </div>
                 </div>

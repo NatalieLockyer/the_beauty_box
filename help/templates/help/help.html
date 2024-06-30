@@ -55,7 +55,8 @@
                 <hr>
                 <h4 class="logo-font text-center mt-4">Premier Delivery - only £10 per year!</h4>
                 <p class="font text-center mt-2">
-                    <li class="font text-center mt-2">Do you want your deliveries there the next day? For 7 days a week?</li>
+                    <li class="font text-center mt-2">Do you want your deliveries there the next day? For 7 days a week?
+                    </li>
                     <li class="font text-center mt-2">Why not sign up to our Premier Delivery for only £10.00.</li>
                     <li class="font text-center mt-2">Giving you *12* Months of *NEXT DAY DELIVERY*.</li>
                 </p>
@@ -75,13 +76,27 @@
         </div>
     </div>
     <hr>
-    
+    <div class="container-fluid bg-return py-4">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="logo-font text-center mt-4"><u>Privacy Policy</u></h3>
+                <p class="font text-center mt-4"><small>Please <a href="{% url 'privacy' %}">click here</a> to view our
+                        privacy policy </small></p>
+                <hr>
             </div>
-            
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 text-center">
+            <a class="btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0 mb-3" href="{% url 'home' %}">Return to
+                Homepage</a>
+        </div>
+    </div>
 </div>
 
 
 
-<a class="font btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0" href="{% url 'home' %}">Homepage</a>
+
 
 {% endblock %}

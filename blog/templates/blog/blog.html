@@ -27,12 +27,12 @@
                 {% if blog.image %}
                 <a href="{% url 'blog_detail' blog.id %}">
                     <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}"
-                        style="width: 300px; height: 225px; ">
+                        style="width: 300px; height: 350px; ">
                 </a>
                 {% else %}
                 <a href="{% url 'blog_detail' blog.id %}">
                     <img class="card-img-top img-fluid" src="{{ MEDIAL_URL }}noimage.png" alt="{{ blog.title }}"
-                        style="width: 300px; height: 225px;">
+                        style="width: 300px; height: 3500px;">
                 </a>
                 {% endif %}
                 <div class="card-body mt-4 p-0 text-center">
@@ -47,15 +47,15 @@
                             <small class="text-muted">This blog has not yet been rated</small>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                                            <small class="ml-1">
-                                                <a href="{% url 'edit_blog' blog.id %}">Edit</a>  |
-                                                <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
-                                            </small>
-                                        {% endif %}
+                            <small class="ml-1">
+                                <a href="{% url 'edit_blog' blog.id %}">Edit</a> |
+                                <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
+                            </small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
@@ -82,4 +82,3 @@
     </div>
 </div>
 {% endblock %}
-
