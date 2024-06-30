@@ -11,7 +11,7 @@ class Blog(models.Model):
     content = models.TextField()
     image_url = models.URLField(max_length=3000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=1, null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
