@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Coupon
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -33,13 +33,9 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    basket = request.session.get('basket', {})
-    print('basket items', basket)
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
-
-        print('basket items', basket)
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -50,8 +46,9 @@ def checkout(request):
             'county': request.POST['county'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'phone_number': request.POST['phone_number'],      
-            }
+            'phone_number': request.POST['phone_number'],
+            'discount_code': request.POST.get('discount_code', ''),    
+        }
 
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -60,6 +57,21 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
+
+            discount_code = form_data.get('discount_code', '')
+            coupon = None
+            if discount_code:
+                try:
+                    coupon = stripe.Coupon.retrieve(discount_code)
+                except stripe.error.InvalidRequestError:
+                    messages.error(request, 'Invalid discount code')
+
+            total = basket_contents(request)['grand_total']
+            if coupon:
+                stripe_total = round((total * (1 - coupon.percent_off / 100)) * 100)
+            else:
+                stripe_total = round(total * 100)
+
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -95,7 +107,7 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            message.error(request, 'There is nothing in your basket')
+            messages.error(request, 'There is nothing in your basket')
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)
@@ -127,7 +139,7 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
-    if not  stripe_public_key:
+    if not stripe_public_key:
         messages.warning(request, 'Your Stripe public key is missing. \
         Did you forget to set it in your environment?')
 

@@ -3,12 +3,14 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
     """ Order form fields we want to render """
+    discount_code = forms.CharField(required=False, max_length=20, label='Discount Code')
+
     class Meta:
         model = Order 
-        fields = ('full_name', 'email', 'phone_number',
+        fields = ['full_name', 'email', 'phone_number',
                 'street_address1', 'street_address2',
                 'town_or_city', 'postcode', 'country',
-                'county',)
+                'county', 'discount_code',]
 
     def __init__(self, *args, **kwargs):
         """ This will add placeholders and classes, remove auto-generated

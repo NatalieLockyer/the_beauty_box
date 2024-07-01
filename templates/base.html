@@ -86,17 +86,17 @@
                                 style="position: absolute; z-index: 1001;">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            <a href="{% url 'add_tutorial' %}" class="dropdown-item">Tutorial Management</a>
-                            <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
-
+                            <a href="{% url 'add_product' %}" class="dropdown-item font">Product Management</a>
+                            <a href="{% url 'add_tutorial' %}" class="dropdown-item font">Tutorial Management</a>
+                            <a href="{% url 'add_blog' %}" class="dropdown-item font">Blog Management</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'help' %}" class="dropdown-item">Help</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>                            
+                            <a href="{% url 'profile' %}" class="dropdown-item font">My Profile</a>
+                            <a href="{% url 'help' %}" class="dropdown-item font">Help</a>
+                            <a href="{% url 'home' %}" class="dropdown-item font">Home</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item font">Logout</a>                            
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item font">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item font">Login</a>
                             {% endif %}
                         </div>
                     </li>
