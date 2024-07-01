@@ -2,62 +2,66 @@
 
 <!doctype html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        {% block meta %}
+        <meta http-equiv="X-UA-Compatable" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="decription" content="The UKs most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones of for yourself.
+        Join us today for 10% off your first order. There are many other discounts and sale items to choose from.">
+        <meta name="keywords"
+            content="The Beauty Box, make up, discounts, sign up discounts, skincare, foundation, makeup tutorials, beauty blogs, tips and tricks, beauty account, body products, next day delivery, free delivery,
+        gifts, gift ideas, quality items, good value, face, body, accessories, professional, sale, beauty by brand, MAC, Dior, Estee Lauder, Bare Minerals, Top rated seller">
+        {% endblock %}
 
-<head>
-    <!-- Required meta tags -->
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatable" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="decription" content="The UKs most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones of for yourself.
-    Join us today for 10% off your first order. There are many other discounts and sale items to choose from.">
-    <meta name="keywords" content="The Beauty Box, make up, discounts, sign up discounts, skincare, foundation, makeup tutorials, beauty blogs, tips and tricks, beauty account, body products, next day delivery, free delivery,
-    gifts, gift ideas, quality items, good value, face, body, accessories, professional, sale, beauty by brand, MAC, Dior, Estee Lauder, Bare Minerals, Top rated seller">
-    {% endblock %}
+        {% block extra_meta %}
+        {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+        <!-- CSS -->
+        {% block corecss %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        {% endblock %}
 
-    <!-- Bootstrap CSS -->
-    {% block corecss %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+        <!-- Javascript -->
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/3ad1443fbb.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/3ad1443fbb.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!--Stripe payments-->
-    <script src="https://js.stripe.com/v3/"></script>
-    
-    {% endblock%}
+        <!--Stripe payments-->
+        <script src="https://js.stripe.com/v3/"></script>
+        {% endblock%}
 
-    {% block extra_js %}
-    {% endblock %}
+        {% block extra_js %}
+        {% endblock %}
 
-    <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
-</head>
+        <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
+    </head>
 
 <body>
+    <!-- Header -->
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h2>
+                    <!-- Main Page Title-->
+                    <h2 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h2> 
                 </a>
                 <hr>
             </div>
@@ -79,15 +83,16 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="text-black nav-link" href="" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
+                        <!-- Drop down menu on the Nav bar -->
                         <div class="dropdown-menu border-0" aria-labelledby="user-options"
-                                style="position: absolute; z-index: 1001;">
+                            style="position: absolute; z-index: 1001;">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item font">Product Management</a>
@@ -97,13 +102,14 @@
                             <a href="{% url 'profile' %}" class="dropdown-item font">My Profile</a>
                             <a href="{% url 'help' %}" class="dropdown-item font">Help</a>
                             <a href="{% url 'home' %}" class="dropdown-item font">Home</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item font">Logout</a>                            
+                            <a href="{% url 'account_logout' %}" class="dropdown-item font">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item font">Register</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item font">Login</a>
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Basket -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_basket' %}">
@@ -153,11 +159,15 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="p-inline w-100">
-                                    <p class="text-center font"><span class="fas fa-truck"></span> FREE UK Shipping when you
+                                    <p class="text-center font"><span class="fas fa-truck"></span> FREE UK Shipping when
+                                        you
                                         spend £{{ free_delivery_threshold }} or more</p>
-                                    <p class="text-center font"><span class="fas fa-clock"></span> Super-Fast Shipping</p>
-                                    <p class="text-center font"><span class="fas fa-coins"></span> 10% off when you sign up!</p>
-                                    <p class="text-center font"><span class="fas fa-arrows-rotate"></span> Quick and easy returns
+                                    <p class="text-center font"><span class="fas fa-clock"></span> Super-Fast Shipping
+                                    </p>
+                                    <p class="text-center font"><span class="fas fa-coins"></span> 10% off when you sign
+                                        up!</p>
+                                    <p class="text-center font"><span class="fas fa-arrows-rotate"></span> Quick and
+                                        easy returns
                                     </p>
                                 </div>
                             </div>
@@ -168,8 +178,7 @@
         </div>
 
         <!-- Carousel for small screens -->
-        <div id="highlight-carousel-small" class="carousel slide p-4 bg-lilac d-block d-lg-none"
-            data-ride="carousel">
+        <div id="highlight-carousel-small" class="carousel slide p-4 bg-lilac d-block d-lg-none" data-ride="carousel">
             <div class="carousel-indicators p-2">
                 <button type="button" data-target="#highlight-carousel-small" data-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -182,7 +191,8 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend £{{ free_delivery_threshold }} or more
+                    <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend £{{
+                        free_delivery_threshold }} or more
                     </p>
                 </div>
                 <div class="carousel-item">
@@ -201,17 +211,17 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
@@ -228,5 +238,6 @@
     </script>
     {% endblock %}
 
-    </body>
+</body>
+
 </html>
