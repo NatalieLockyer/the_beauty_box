@@ -33,9 +33,13 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    basket = request.session.get('basket', {})
+    print('basket items', basket)
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
+
+        print('basket items', basket)
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -67,7 +71,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for shades, quantity in item_data['item_by_shades'].items():
+                        for shades, quantity in item_data['items_by_shades'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -138,7 +142,7 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """ This will handel successful checkouts """
+    """ This will handle successful checkouts """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -148,7 +152,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # This will save the users info
+        # This will save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number':  order.phone_number,
@@ -168,12 +172,12 @@ def checkout_success(request, order_number):
             will be sent to { order.email }. \
             We hope you will be pleased with your order. ')
 
-        if 'basket' in request.session:
-            del request.session['basket']
+    if 'basket' in request.session:
+        del request.session['basket']
 
-        template = 'checkout/checkout_success.html'
-        context = {
-            'order': order,
-        }
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
 
-        return render(request, template, context)
+    return render(request, template, context)
