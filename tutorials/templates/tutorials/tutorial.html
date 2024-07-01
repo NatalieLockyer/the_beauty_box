@@ -49,11 +49,12 @@
                             <small class="text-muted">This tutorial has not yet been rated</small>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                                            <small class="ml-1">
-                                                <a href="{% url 'edit_tutorial' tutorial.id %}">Edit</a>  |
-                                                <a class="text-danger" href="{% url 'delete_tutorial' tutorial.id %}">Delete</a>
-                                            </small>
-                                        {% endif %}
+                                <small class="ml-1">
+                                    <a href="{% url 'edit_tutorial' tutorial.id %}">Edit</a>  |
+                                    <a class="text-danger" href="{% url 'delete_tutorial' tutorial.id %}">Delete</a>
+                                </small>
+                            {% endif %}
+                            <a class="font btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0" href="{% url 'home' %}">Homepage</a>
                         </div>
                     </div>
                 </div>
