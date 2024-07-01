@@ -70,13 +70,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
             return f'SKU {self.product.sku} on order number {self.order.order_number}'
-
-
-# Model for Discount Code that can be used on signup off your first order.
-class Coupon(models.Model):
-    code = models.CharField(max_length=20, unique=True)
-    discount = models.DecimalField(max_digits=5, decimal_places=2)
-    active = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.code

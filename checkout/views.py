@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem, Coupon
+from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -46,8 +46,7 @@ def checkout(request):
             'county': request.POST['county'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'phone_number': request.POST['phone_number'],
-            'discount_code': request.POST.get('discount_code', ''),    
+            'phone_number': request.POST['phone_number'],  
         }
 
         order_form = OrderForm(form_data)
@@ -57,20 +56,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
-
-            discount_code = form_data.get('discount_code', '')
-            coupon = None
-            if discount_code:
-                try:
-                    coupon = stripe.Coupon.retrieve(discount_code)
-                except stripe.error.InvalidRequestError:
-                    messages.error(request, 'Invalid discount code')
-
-            total = basket_contents(request)['grand_total']
-            if coupon:
-                stripe_total = round((total * (1 - coupon.percent_off / 100)) * 100)
-            else:
-                stripe_total = round(total * 100)
 
             for item_id, item_data in basket.items():
                 try:
