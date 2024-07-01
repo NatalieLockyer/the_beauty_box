@@ -23,7 +23,7 @@ def all_tutorials(request):
 def tutorial_detail(request, tutorial_id):
     """ A view to show the individual details of the tutorial videos """
     
-    tutorial = get_object_or_404(Tutorial, pk=tutorial_id)
+    tutorials = get_object_or_404(Tutorial, pk=tutorial_id)
 
     context = {
         'tutorial': tutorial,
