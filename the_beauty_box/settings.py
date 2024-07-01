@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-i5pjsszp67k#c4$*-egd$!ep0$$fml_)nmbz2z8n#1d^d-qjl#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['the-beauty-box.herokuapp.com', 'localhost',]
+ALLOWED_HOSTS = ['the-beauty-box-9dcfa44a254a.herokuapp.com', 'localhost',]
 
 
 # Application definition
