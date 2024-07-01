@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-from pathlib import Path
 import os
 import dj_database_url
+
+from pathlib import Path
 if os.path.isfile('env.py'):
     import env
 
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-i5pjsszp67k#c4$*-egd$!ep0$$fml_)nmbz2z8n#1d^d-qjl#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-natalielock-thebeautybo-wozjz2y9eye.ws.codeinstitute-ide.net', 'herokuapp.com', 'the-beauty-box-9dcfa44a254a.herokuapp.com', 'localhost',]
+ALLOWED_HOSTS = ['the-beauty-box.herokuapp.com', 'localhost',]
 
 
 # Application definition
