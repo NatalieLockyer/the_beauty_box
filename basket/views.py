@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from products.models import Product
 
-# Create your views here.
 
 def view_basket(request):
     """ A view that renders the basket contents page """
@@ -25,17 +26,35 @@ def add_to_basket(request, item_id):
         if item_id in list(basket.keys()):
             if shades in basket[item_id]['items_by_shades'].keys():
                 basket[item_id]['items_by_shades'][shades] += quantity
-                messages.success(request, f'Updated shade {shades} {product.name} quantity to {basket[item_id]['items_by_shades'][shades]}')
+                messages.success(
+                    request,
+                    (
+                        f'Updated shade {shades} {product.name} quantity to'
+                        f' {basket[item_id]['items_by_shades'][shades]}')
+                    )
             else:
                 basket[item_id]['items_by_shades'][shades] = quantity
-                messages.success(request, f'Added shade {shades} {product.name} to your basket')
+                messages.success(
+                    request,
+                    (
+                        f'Added shade {shades} {product.name} to your basket')
+                    )
         else:
             basket[item_id] = {'items_by_shades' : {shades: quantity}}
-            messages.success(request, f'Added shade {shades} {product.name} to your basket')
+            messages.success(
+                    request,
+                    (
+                        f'Added shade {shades} {product.name} to your basket')
+                    )
     else:
         if item_id in list(basket.keys()):
             basket[item_id] += quantity
-            messages.success(request, f'Updated "{product.name}" quantity to {basket[item_id]}')
+            messages.success(
+                    request, 
+                    (
+                        f'Updated "{product.name}" quantity to'
+                        f' {basket[item_id]}')
+                    )
         else:
             basket[item_id] = quantity
             messages.success(request, f'This item "{product.name}" has been added to your basket')
@@ -57,19 +76,28 @@ def adjust_basket(request, item_id):
     if shades:
         if quantity > 0:
             basket[item_id]['items_by_shades'][shades] = quantity
-            messages.success(request, f'Updated shade {shades} {product.name} quantity to {basket[item_id]['items_by_shades'][shades]}')
+            messages.success(
+                    request, 
+                    ( 
+                        f'Updated shade {shades} {product.name} quantity to '
+                        f' {basket[item_id]['items_by_shades'][shades]}')
+                    )
         else:
             del basket[item_id]['items_by_shades'][shades]
             if not basket[item_id]['items_by_shades']:
                 basket.pop(item_id)
-                messages.success(request, f'Removed shade {shades} {product.name} from your basket')
+                messages.success(
+                    request, 
+                    (
+                        f'Removed shade {shades} {product.name} to your basket')
+                    )
     else:
         if quantity > 0:
             basket[item_id] = quantity
             messages.success(request, f'Updated "{product.name}" quantity to {basket[item_id]}')
         else:
             basket.pop(items_id)
-            messages.success(request, f'This item "{product.name}" has been removed from your basket')        
+            messages.success(request, f'This item "{product.name}" has been removed from your basket')
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
@@ -89,7 +117,11 @@ def remove_from_basket(request, item_id):
             del basket[item_id]['items_by_shades'][shades]
             if not basket[item_id]['items_by_shades']:
                 basket.pop(item_id)
-                messages.success(request, f'Removed shade {shades} {product.name} from your basket')
+                messages.success(
+                    request, 
+                    (
+                        f'Removed shade {shades} {product.name} to your basket')
+                    )
         else:
             basket.pop(item_id)      
             messages.success(request, f'This item "{product.name}" has been removed from your basket')
