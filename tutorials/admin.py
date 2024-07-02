@@ -1,16 +1,13 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
 from .models import Tutorial
 
-class TutorialAdmin(SummernoteModelAdmin):
+class TutorialAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'rating',
+        'description',
         'video',
         'video_url',
-    )
-    summernote_fields = (
-        'description',
     )
 
     ordering = ('rating',)

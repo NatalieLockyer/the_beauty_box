@@ -7,9 +7,10 @@ from django.utils.safestring import mark_safe
 from .models import Blog, Comment
 from .forms import BlogForm, CommentForm
 
+
 def all_blogs(request):
     """ A view to show all blogs """
-    
+
     blog = Blog.objects.all()
 
     context = {
@@ -38,12 +39,13 @@ def blog_detail(request, blog_id):
 
     comment_form = CommentForm()
 
-    return render(request, 'blog/blog_detail.html',{
+    return render(request, 'blog/blog_detail.html', {
         'blog': blog,
         'comments': comments,
         'comment_form': comment_form,
-        'comment_count': comment_count}, 
+        'comment_count': comment_count},
         )
+
 
 @login_required
 def comment_edit(request, blog_id, comment_id):
@@ -62,8 +64,10 @@ def comment_edit(request, blog_id, comment_id):
             messages.success(request, 'Your comment has been updated')
             return redirect('blog_detail', blog_id=blog_id)
         else:
-            messages.error(request, 'There has been an error updating your comment')
-    
+            messages.error(
+                request,
+                ('There has been an error updating your comment')
+                )
     comment_form = CommentForm(instance=comment)
     return render(request, 'blog/comment_edit.html', {
         'comment_form': comment_form,
@@ -76,14 +80,20 @@ def comment_edit(request, blog_id, comment_id):
 def comment_delete(request, blog_id, comment_id):
     """ A view so users can delete their comments"""
 
-    blog = get_object_or_404(Blog, pk=blog_id) 
+    blog = get_object_or_404(Blog, pk=blog_id)
     comment = get_object_or_404(Comment, pk=comment_id, blog=blog)
 
     if comment.author == request.user:
         comment.delete()
         messages.success(request, 'Your comment has been deleted')
     else:
-        messages.error(request, 'There has been an error deleting your comment, please try again')
+        messages.error(
+                request,
+                (
+                    'There has been an error deleting your '
+                    'comment, please try again'
+                    )
+            )
 
     return HttpResponseRedirect(reverse('blog_detail', args=[blog_id]))
 
@@ -92,7 +102,7 @@ def comment_delete(request, blog_id, comment_id):
 def add_blog(request):
     """ Add a blog to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that')
+        messages.error(request, 'Only owners have permission to do that')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -102,10 +112,16 @@ def add_blog(request):
             messages.success(request, 'Successfully uploaded blog!')
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to upload blog. Please check the form is valid and try again.')
+            messages.error(
+                request,
+                (
+                    'Failed to upload blog.'
+                    'Please check the form is valid and try again.'
+                )
+            )
     else:
         form = BlogForm()
-        
+
     template = 'blog/add_blog.html'
     context = {
         'form': form,
@@ -118,7 +134,7 @@ def add_blog(request):
 def edit_blog(request, blog_id):
     """ Edit a blog within the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that')
+        messages.error(request, 'Only owners have permission to do that')
         return redirect(reverse('home'))
 
     blog = get_object_or_404(Blog, pk=blog_id)
@@ -126,14 +142,25 @@ def edit_blog(request, blog_id):
         form = BlogForm(request.POST,  request.FILES, instance=blog)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your blog has been successfully updated!')
+            messages.success(
+                request,
+                (
+                    'Your blog has been successfully updated!'
+                )
+                )
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to upload blog. Please check the form is valid and try again')
+            messages.error(
+                request,
+                (
+                    'Failed to upload blog.'
+                    'Please check the form is valid and try again'
+                )
+            )
     else:
         form = BlogForm(instance=blog)
     messages.info(request, f'You are editing {blog.title}')
-    
+
     template = 'blog/edit_blog.html'
     context = {
         'form': form,
@@ -147,7 +174,7 @@ def edit_blog(request, blog_id):
 def delete_blog(request, blog_id):
     """ Delete a blog in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that')
+        messages.error(request, 'Only owners have permission to do that')
         return redirect(reverse('home'))
 
     blog = get_object_or_404(Blog, pk=blog_id)

@@ -1,10 +1,9 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from django_summernote.widgets import SummernoteWidget
 from .models import Tutorial
 
 class DescriptionForm(forms.Form):
-    description = forms.CharField(widget=SummernoteWidget())
+    description = forms.CharField(max_length=254)
 
 
 class TutorialForm(forms.ModelForm):
@@ -12,9 +11,6 @@ class TutorialForm(forms.ModelForm):
     class Meta:
         model = Tutorial
         fields = '__all__'
-        widgets = {
-            'description': SummernoteWidget()
-        }
 
     image = forms.ImageField(label="Image", required=False, widget=CustomClearableFileInput)
     
