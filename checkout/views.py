@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -12,6 +13,7 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -46,7 +48,7 @@ def checkout(request):
             'county': request.POST['county'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'phone_number': request.POST['phone_number'],  
+            'phone_number': request.POST['phone_number'],
         }
 
         order_form = OrderForm(form_data)
@@ -68,7 +70,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for shades, quantity in item_data['items_by_shades'].items():
+                        for shades, quantity in item_data[
+                                'items_by_shades'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -78,17 +81,19 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your basket was not found in our database. "
-                        "Please call us for assistance!")
+                        "One of the products in your basket was not found"
+                        "in our database. Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+                )
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check the information you entered and try again.')
+                Please check the information you entered and try again.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
@@ -164,8 +169,10 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-        messages.success(request, f'Your order has been successfully processed! \
-            Your Beauty Box order number is { order.order_number }. A confirmation email \
+        messages.success(
+            request, f'Your order has been successfully processed! \
+            Your Beauty Box order number is { order.order_number }. \
+            A confirmation email \
             will be sent to { order.email }. \
             We hope you will be pleased with your order. ')
 

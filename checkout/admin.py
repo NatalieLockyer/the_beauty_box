@@ -11,12 +11,12 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
-    """ These are all fields that will be calculated 
+    """ These are all fields that will be calculated
         by the order model. """
     readonly_fields = ('order_number', 'date',
-                        'delivery_cost', 'order_total',
-                        'grand_total', 'original_basket',
-                        'stripe_pid',)
+                       'delivery_cost', 'order_total',
+                       'grand_total', 'original_basket',
+                       'stripe_pid',)
 
     """ Allows me to specify the order fields in the admin interface"""
     fields = ('order_number', 'user_profile', 'date', 'full_name',
@@ -30,5 +30,6 @@ class OrderAdmin(admin.ModelAdmin):
                     'order_total', 'delivery_cost', 'grand_total',)
 
     ordering = ('-date',)
+
 
 admin.site.register(Order, OrderAdmin)

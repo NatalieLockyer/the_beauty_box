@@ -1,14 +1,15 @@
 from django import forms
 from .models import Order
 
+
 class OrderForm(forms.ModelForm):
     """ Order form fields we want to render """
     class Meta:
-        model = Order 
+        model = Order
         fields = ['full_name', 'email', 'phone_number',
-                'street_address1', 'street_address2',
-                'town_or_city', 'postcode', 'country',
-                'county',]
+                  'street_address1', 'street_address2',
+                  'town_or_city', 'postcode', 'country',
+                  'county', ]
 
     def __init__(self, *args, **kwargs):
         """ This will add placeholders and classes, remove auto-generated
@@ -22,7 +23,7 @@ class OrderForm(forms.ModelForm):
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
             'postcode': 'Postal Code',
-            'phone_number': 'Phone Number',    
+            'phone_number': 'Phone Number',
            }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True

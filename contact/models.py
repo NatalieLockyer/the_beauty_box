@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CollaborationRequest(models.Model):
     """ Stores a single collaboration form"""
     name = models.CharField(max_length=100)
