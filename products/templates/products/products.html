@@ -44,7 +44,6 @@
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
-                            <button class="font btn btn-lg btn-pink btn-pink-hover text-uppercase rounded-0" href="{% url 'home' %}" >Homepage</button>
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
