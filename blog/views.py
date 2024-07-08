@@ -102,7 +102,8 @@ def comment_delete(request, blog_id, comment_id):
 def add_blog(request):
     """ Add a blog to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only owners have permission to do that')
+        messages.error(request, 'Sorry, only store \
+           owners have permission to do that')
         return redirect(reverse('home'))
 
     if request.method == 'POST':

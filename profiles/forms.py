@@ -1,12 +1,12 @@
 from django import forms
 from .models import UserProfile
 
+
 class UserProfileForm(forms.ModelForm):
     """ Order form fields we want to render """
     class Meta:
-        model = UserProfile 
+        model = UserProfile
         exclude = ('user',)
-
 
     def __init__(self, *args, **kwargs):
         """ This will add placeholders and classes, remove auto-generated
@@ -18,7 +18,7 @@ class UserProfileForm(forms.ModelForm):
             'default_town_or_city': 'Town or City',
             'default_county': 'County, State or Locality',
             'default_postcode': 'Postal Code',
-            'default_phone_number': 'Phone Number',    
+            'default_phone_number': 'Phone Number',
            }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
