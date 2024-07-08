@@ -85,7 +85,7 @@ def adjust_basket(request, item_id):
                     request,
                     (
                         f'Updated shade {shades} {product.name} quantity to'
-                        f' {basket[item_id]['items_by_shades'][shades]}')
+                        f' {basket[item_id]["items_by_shades"][shades]}')
                     )
         else:
             del basket[item_id]['items_by_shades'][shades]
