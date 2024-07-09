@@ -5,6 +5,7 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
 ***
 
 ![Image of sie on devices](media/readme_images/site-image.png)
+
 [Please click here to view my live website](https://the-beauty-box-9dcfa44a254a.herokuapp.com/)
 
 # Contents
@@ -35,17 +36,18 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
       + [Product Detail Page](#product-detail-page)
       + [Shopping Basket Page](#shopping-basket-page)
       + [Checkout Page](#checkout-page)
-      + [Tutorial Page](#)
-      + [Tutorial Detail Page](#)
-      + [Blog Page](#)
-      + [Blog Detail Page](#)
-      + [Sign Up Page](#)
-      + [Login Page](#)
-      + [Profile Page](#)
-      + [Help Page](#)
-      + [Contact Page](#)
-      + [Error Page](#)
-
+      + [Tutorial Page](#tutorial-page)
+      + [Tutorial Detail Page](#tutorial-detail-page)
+      + [Blog Page](#blog-page)
+      + [Blog Detail Page](#blog-detail-page)
+      + [Blog Comment Section](#blog-comment-section)
+      + [Sign Up Page](#sign-up-page)
+      + [Login Page](#login-page)
+      + [Profile Page](#profile-page)
+      + [Managment Pages](#management-pages-superusers-only)
+      + [Help Page](#help-page)
+      + [Contact Page](#contact-page)
+      + [404 Error Page](#404-error-page)
 + [Future Features](#future-features)
 + [Technologies Used](#technologies-used)
     + [Languages Used](#language)
@@ -288,7 +290,7 @@ Confirmation Email
 * The navigation bar is also fully reponsive allowing the user to navigate around the store easily
 * It displays all the tutorials available on the site
 * There is a homepage button to return the user to the homepage
-* You will see on the imageg that there is an edit|delete button. This is only visible to the superuser which will be covered later.
+* You will see on the image that there is an edit|delete button. This is only visible to the superuser which will be covered later.
 * When the user clicks on a tutorial image they will be taken to the individual tutorial detail page.
 
 ![Tutorial Page Screenshot](media/readme_images/tutorial_screenshot.png)
@@ -297,9 +299,121 @@ Confirmation Email
 * The tutorial detail page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
 * The navigation bar is also fully reponsive allowing the user to navigate around the store easily
 * This page shows the individual tutorial, a tutorial video and a small section of text.
+* Users can press the play button to start the video
 * The user can see a rating of the video
 * There is a return to tutorials button which will take the user back to the tutorial page. 
 
 ![Tutorial Detail Page](media/readme_images/tutorial_detail_screenshot.png)
 
 
+#### Blog Page
+* The blog page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* It displays all the blogs available on the site
+* There is a homepage button to return the user to the homepage
+* When the user clicks on the blog image they will be taken to the individual blog detail page.
+
+![Blog Page Screenshot](media/readme_images/blog_screenshot.png)
+
+#### Blog Detail Page
+* The blog detail page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* This page shows the blog image and the content of the blog itself. 
+* The user can see a rating of the blog
+* There is a return to blog button which will take the user back to the blog page. 
+* As the user gets to the bottom of the blog, there is a section where they can add / edit and delete comments.
+
+![Blog Detail Screenshot](media/readme_images/blog_detail_screenshot.png)
+
+#### Blog Comment Section
+* Logged in users are able to add comments to blogs. 
+* They can also make changed to their own comment and delete them if they wish. 
+* Comments will only appear on the website once they have been approved by the superuser. 
+
+![Blog Comment Section](media/readme_images/blog_comments_screenshot.png)
+
+
+#### Sign Up Page
+* Users can navigate to this page by selecting the Register link on the 'My Account' drop down menu. 
+* The sign up page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* Users are required to input the fields within the form before selecting the 'Sign Up' button. 
+* Once done, the user will recieve a message to confirm that a verification email will be sent to them. Users will need to approve this before they get full access to the site. 
+
+![Sign Up Page](media/readme_images/signup_screenshot.png)
+
+Sign Up Verification Message
+
+![Sign Up Verification Message](media/readme_images/verify_email_screenshot.png)
+
+Sign Up Verification Email
+
+![Sign Up Verification Email](media/readme_images/verification_email.png)
+
+
+#### Login Page
+* Users can navigate to this page by selecting the Login link on the 'My Account' drop down menu. 
+* The Login page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* Users are required to input the fields within the form before selecting the 'Sign In' button. 
+* If users forget their password they can select the forgot password link.
+* Users also have the option of the 'remember me' button. 
+
+![Login Page](media/readme_images/login_screenshot.png)
+
+
+#### Profile Page
+* Users can navigate to this page by selecting the My Profile link on the 'My Account' drop down menu. 
+* The Profile page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* On this page, users are able to update their delivery information and contact number. 
+* User can also see any previous orders, and click on the link to see them. 
+
+![Profile Page](media/readme_images/profile_screenshot.png)
+
+
+#### Management Pages (Superusers ONLY)
+* Superusers can navigate to this page by selecting the relevant management link on the 'My Account' drop down menu. 
+* The superusers are able to add / edit and delete products once logged into the site. 
+* Superuser are required to fill in the necessary fields before submitting. 
+* On this site, the superuser can manage products, tutorials and the blog pages. 
+
+![Management Link](media/readme_images/management_links.png)
+
+Management Pages for the superuser 
+
+![Managment Pages](media/readme_images/management_screenshot.png)
+
+
+#### Help Page
+* Users can navigate to this page by selecting the Help link on the 'My Account' drop down menu. 
+* The Help page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* On this page, users will see information relating to returns, delivery information and the site's privacy policy.
+* There is a homepage button to return the user to the homepage
+* There is also a link that that the user directly to the contact page.
+
+![Help Page](media/readme_images/help_screenshot.png)
+
+
+#### Contact Page
+* Users can navigate to this page by selecting the Contact link on the 'My Account' drop down menu. 
+* The Contact page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* On this page, users can enter their name, email address and a message which when submitted will be sent to the admin.
+* Users will see a message to confirm that their message was sent. 
+* There is a homepage button to return the user to the homepage
+
+
+![Contact Page](media/readme_images/contact_screenshot.png)
+
+Contact Confirmation message
+
+![Contact Confirmation Message](media/readme_images/contact_message.png)
+
+
+### 404 Error Page
+* Users will be directed to this page if there is a broken link within the website. 
+* Users have the option to return to the homepage by selecting the homepage button. 
+
+![404 Error Page](media/readme_images/error_screenshot.png)
