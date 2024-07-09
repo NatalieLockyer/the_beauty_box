@@ -30,11 +30,11 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
     + [Design](#design)
       + [Typography ](#typography)
     + [Features](#features)
-      + [Main Homepage](#)
-      + [Products Page](#)
-      + [Product Detail Page](#)
-      + [Basket Page](#)
-      + [Checkout Page](#)
+      + [Main Homepage](#homepage)
+      + [Products Page](#products-page)
+      + [Product Detail Page](#product-detail-page)
+      + [Shopping Basket Page](#shopping-basket-page)
+      + [Checkout Page](#checkout-page)
       + [Tutorial Page](#)
       + [Tutorial Detail Page](#)
       + [Blog Page](#)
@@ -211,5 +211,95 @@ For my website I used a font called Raleway. For the main headings and subtitles
 ### Features
 
 #### Homepage
-The homepage contains a fully responsive navigation bar used to navigate throughout the site. It displays a profile icon linking to the users profile, or a login menu if the user isnt logged in. A basket icon where the user can see what items (if any) are in the basket. A search bar to find specific items within the site.
+* The homepage contains a fully responsive navigation bar used to navigate throughout the site. 
+* It displays a profile icon linking to the users profile, or a login menu if the user isnt logged in. 
+* A basket icon where the user can see what items (if any) are in the basket. 
+* A search bar to find specific items within the site.
+* A scrolling banner with messages to the users
+* Links to other pages of the website (Shop Now, Tutorials and Beauty Blogs)
+* A footer that links the user to social media pages, and in particular our 'Beauty Box' Facebook page.
+
+![Homepage Screenshot](media/readme_images/homepage_screenshot.png)
+
+#### Products Page
+* The products page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* It displays all the products available within the store
+* There is a filtering option that allows users to sort by a specific category, e.g. Price low to high. 
+* There is an arrow in the bottom right corner which when pressed takes the user to the top of the page.
+
+![Product Page Screenshot](media/readme_images/product_screenshot.png)
+
+#### Product Detail Page
+* The product detail page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* This page shows the individual product, with details about the product
+* If the product has shades the user is able to select a colour.
+* The user is able to select the quantity of the item
+* A keep shopping button that takes the user back to the products page
+* Add to basket button which adds the product to the users shopping Basket
+
+![Product Detail Screenshot](media/readme_images/product_detail_screenshot.png)
+
+#### Shopping Basket Page
+* The Shopping Basket page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* This page shows all the items that the user has added to basket
+* This shows an image of the product, the title, the price, the quantity, the subtotal, delivery cost (if applicable) the grand total and the amount the user needs to spend to qualify for free delivery.
+* There is also an option for the user to update the quantity or remove the item from the basket.
+* A keep shopping button that takes the user back to the products page
+* A secure checkout button which takes the user to the secure checkout page
+* A homepage button which takes the user back to the homepage
+* When a user add an item to the basket / updates the basket or removes the item from the basket the user will get a message.
+
+![Basket Page](media/readme_images/basket_screenshot.png)
+
+Example Success Message
+
+![Success Message](media/readme_images/added_to_basket_screenshot.png)
+
+
+#### Checkout Page
+* The Checkout Basket page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* If the user is logged into their account, their email and delivery address will be pre-populated. However, users will still need to enter their full name.
+* User can see an order summary containing items within their order, an order total, delivery total and a grand total.
+* Once all the form is complete and the user is happy with the order summary, the user is able to input their card details before clicking the complete order button.
+* Alternativly they can amend their order using the 'adjust basket' button. 
+* When the user selects the complete order button, a confirmation message will appear and the user will recieve a confirmation email.
+
+![Checkout Page](media/readme_images/checkout_screenshot.png)
+
+Confirmation Message
+
+![Confirmation Message](media/readme_images/confirmation_message.png)
+
+Confirmation Page
+
+![Confirmation Page](media/readme_images/confirmation_page.png)
+
+Confirmation Email 
+
+![Confirmation Email](media/readme_images/confirmation_email.png)
+
+
+#### Tutorial Page
+* The Tutorial page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* It displays all the tutorials available on the site
+* There is a homepage button to return the user to the homepage
+* You will see on the imageg that there is an edit|delete button. This is only visible to the superuser which will be covered later.
+* When the user clicks on a tutorial image they will be taken to the individual tutorial detail page.
+
+![Tutorial Page Screenshot](media/readme_images/tutorial_screenshot.png)
+
+#### Tutorial Detail Page
+* The tutorial detail page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
+* The navigation bar is also fully reponsive allowing the user to navigate around the store easily
+* This page shows the individual tutorial, a tutorial video and a small section of text.
+* The user can see a rating of the video
+* There is a return to tutorials button which will take the user back to the tutorial page. 
+
+![Tutorial Detail Page](media/readme_images/tutorial_detail_screenshot.png)
+
 
