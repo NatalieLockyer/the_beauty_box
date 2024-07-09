@@ -31,6 +31,7 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
     + [Design](#design)
       + [Typography ](#typography)
     + [Features](#features)
+      + [Defensive Programming](#defensive-programming)
       + [Main Homepage](#homepage)
       + [Products Page](#products-page)
       + [Product Detail Page](#product-detail-page)
@@ -48,21 +49,24 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
       + [Help Page](#help-page)
       + [Contact Page](#contact-page)
       + [404 Error Page](#404-error-page)
-+ [Future Features](#future-features)
+    + [Future Features](#future-features)
 + [Technologies Used](#technologies-used)
-    + [Languages Used](#language)
-    + [Frameworks Used](#frameworks-and-tools)
-+ [Testing](#testing)
-  + [Code Validation](#code-validation)
-  + [Full Testing](#full-testing)
-  + [Fixed Bugs](#fixed-bugs)
-  + [Supported Browsers](#supported-browsers)
-  + [Deployment and Local Deployment](#deployment-and-local-deployment)
-  + [Deployment](#deployment)
-  + [Local Deployment](#local-deployment)
-  + [How to Clone](#how-to-clone)
-+ [Credits](#credits)
-+ [Acknowledgement](#acknowledgements)
+    + [Languages Used](#languages)
+    + [Frameworks Used](#frameworks)
+    + [Libraries and Packages](#libraries-and-packages)
+    + [Design](#design)
+    + [Stripe](#stripe)
++ [Testing](#)
+  + [Code Validation](#)
+  + [Full Testing](#)
+  + [Fixed Bugs](#)
+  + [Supported Browsers](#)
+  + [Deployment and Local Deployment](#)
+  + [Deployment](#)
+  + [Local Deployment](#)
+  + [How to Clone](#)
++ [Credits and Acknowledgements](#)
+
 
 ***
 ***
@@ -92,7 +96,7 @@ For Superusers it provides all of the above and in addition -
 In order to make an example purchase a specific card number is required:
 |Card Number|Date|CVC|Postal Code|
 |---|---|---|---|
-|4242 4242 4242 4242|any date|any 3 numbers|any 5 numbers|
+|4242 4242 4242 4242|any future date|any 3 numbers|any 5 numbers|
 
 
 
@@ -211,6 +215,14 @@ For my website I used a font called Raleway. For the main headings and subtitles
 
 
 ### Features
+
+#### Defensive Programming 
+Throughout my website I have implemented defensive programming in order to keep it safe.
+
+Within my code, I have used python decorators, specifically 'login_required'. This means that users are not able to access the admin/user profiles, unless they are logged in. It also stops
+the users from accessing these pages via their URLs. Users will get error messages if they try to access these parts of the site that they do not have access to. 
+
+I have also used jinga templating. If the user is not logged in they have the option to 'register' or login. If the user is logged in they are able to access their profile page. Jinja also checks if the user is a superuser and block access to admin pagegs if required too.
 
 #### Homepage
 * The homepage contains a fully responsive navigation bar used to navigate throughout the site. 
@@ -412,8 +424,93 @@ Contact Confirmation message
 ![Contact Confirmation Message](media/readme_images/contact_message.png)
 
 
-### 404 Error Page
+#### 404 Error Page
 * Users will be directed to this page if there is a broken link within the website. 
 * Users have the option to return to the homepage by selecting the homepage button. 
+* Within my code I have also implemented a 'get_object_or_404' function. In the event that a product is not available, does not exist or cannot be found a 404 error is created.
 
 ![404 Error Page](media/readme_images/error_screenshot.png)
+
+
+### Future Features
+
+In the future, I would like to add the following features:
+
+* I would like to be able to add the discount codes to the checkout - Unfortuantely I ran out of time and wasnt able to implement it. 
+* I would like to add a monthly subscription to a 'Beauty Box'. Users can opt in / opt out monthly if they would like to recieve it. 
+* I would like to have a product of the month section - detailing the brand and special offers. 
+* I would like to add an image to the 'My Profile' page. 
+* I would like to add more products, tutorials and blogs. 
+* I would like to add a 'My Favourite Products' Page. Users can add their favourite products to the page and get notifications when the product has been reduced or on offer. 
+
+## Technologies Used
+
+### Languages
+* [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [JavaScript](https://www.javascript.com/)
+* [Markdown](https://www.markdownguide.org/)
+* [Python](https://www.python.org/)
+
+### Frameworks
+* [Bootstrap](https://getbootstrap.com/) - A framework that uses classes and JS to help build responsive webpages
+* [Django](https://www.djangoproject.com/) - A Python web framework that aids in quick development of apps as well as clean design.
+
+### Libraries and Packages
+
+* [boto3](https://pypi.org/project/boto3/) - Allows connection to AWS S3 bucket
+* [botocore](https://pypi.org/project/botocore/) - The foundation for the AWS CLI and boto3
+* [dj-database-url](https://pypi.org/project/dj-database-url/) - Allows the utilisation of the DATABASE_URL variable
+* [Django Allauth](https://docs.allauth.org/en/latest/) - Used for authentication, registration and account management within the site
+* [django-countries](https://pypi.org/project/django-countries/) - Provides country choices for use with forms and country field for models
+* [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) - Builds programmatic reusable layouts for Django forms
+* [django-storages](https://pypi.org/project/django-storages/) - A storage backend library
+* [Font Awesome](https://fontawesome.com/) - A library of icons
+* [gunicorn](https://pypi.org/project/gunicorn/) - A Python WSGI HTTP Server
+* [pillow](https://pypi.org/project/pillow/) - A Python imaging library
+* [psycopg2](https://pypi.org/project/psycopg2/) - A postgres database adapter allowing connection with a postgres database
+* [jQuery](https://jquery.com/) - V 3.4.1 - A JavaScript framework
+
+### Design
+
+* [Google Fonts](https://fonts.google.com/) - a free, open-source collection of web fonts provided by Google 
+* [Git](https://git-scm.com/) - Version control
+* [GitHub](https://github.com/) - Saves and stores files for the project
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - Helps diagnose problems quickly and test features
+* [pip](https://pypi.org/project/pip/) - Used for installing/unistalling packages in the terminal
+
+
+### Stripe
+* [Stripe](https://stripe.com/gb) is used to implement the payment system.
+
+In order to make a successful example purchase a specific card number is required:
+|Card Number|Date|CVC|Postal Code|
+|---|---|---|---|
+|4242 4242 4242 4242|any future date|any 3 numbers|any 5 numbers|
+
+In order to make a payment that requires authentication a specific care number is required:
+|Card Number|Date|CVC|Postal Code|
+|---|---|---|---|
+|4000 0025 0000 3155|any date|any 3 numbers|any 5 numbers|
+
+In order to make a payment always Declines (e.g. insufficent funds):
+|Card Number|Date|CVC|Postal Code|
+|---|---|---|---|
+|4000 0000 0000 9995|any date|any 3 numbers|any 5 numbers|
+
+
+## Testing
+
+
+
+
+
+
+## Credits and Acknowledgements
+* [Django](https://www.djangoproject.com/) - Used this the create my site
+* [Code Institute](https://learn.codeinstitute.net/dashboard) - Used the walkthrough alongside implementing my project
+* [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - Used to check and fix python errors
+* [Google Fonts](https://fonts.google.com/) - Used for fonts across my site
+* [Heroku](https://www.heroku.com/home) - Used to deploy the site too.
+* [Python](https://www.python.org/) - Used for coding functions and classes
+* [Pexels](https://www.pexels.com/) - Used for selecting images/videos for my website
