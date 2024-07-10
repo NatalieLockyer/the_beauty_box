@@ -10,70 +10,68 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-75">
-        <div class="row h-75 align-items-center">
-                <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
-                    <div class="my-5">
-                        <h4 class="mb-4">
-                            <button type="submit" class="logo-font btn-pink">
-                            <a href="{% url 'products' %}" 
-                                class="shop-now-button btn btn-lg 
-                                    rounded-0 text-uppercase">Shop Now
-                            </a></button>
-                        </h4>
+<div class="container h-75">
+    <div class="row h-75 align-items-center">
+        <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+            <div class="my-5">
+                <h4 class="mb-4">
+                    <a href="{% url 'products' %}" class="logo-font btn btn-pink btn-lg 
+                                    rounded-0 text-uppercase w-100">Shop Now
+                    </a>
+                </h4>
 
-                        <h4 class="mb-4">
-                            <button type="submit" class="logo-font btn-pink">
-                            <a href="{% url 'tutorial' %}" 
-                                class="shop-now-button btn btn-lg 
-                                    rounded-0 text-uppercase">Tutorials
-                            </a></button>
-                        </h4>
+                <h4 class="mb-4">
+                    <a href="{% url 'tutorial' %}" class="logo-font btn btn-pink btn-lg 
+                            rounded-0 text-uppercase w-100">Tutorials
+                    </a>
+                </h4>
 
-                        <h4 class="mb-4">
-                            <button type="submit" class="logo-font btn-pink">
-                            <a href="{% url 'blog' %}" 
-                                class="shop-now-button btn btn-lg
-                                    rounded-0 text-uppercase">Beauty Blogs
-                            </a></button>
-                        </h4>
-                    </div>
-                </div>
+                <h4 class="mb-4">
+                    <a href="{% url 'blog' %}" class="logo-font btn btn-pink btn-lg 
+                            rounded-0 text-uppercase w-100">Beauty Blogs
+                    </a>
+                </h4>
+            </div>
+        </div>
 
-                <div class="col-12 col-md-6 col-lg-4 text-center">
-                    <div class="image-container ">
-                        <img class="homepage-image mb-4" src="{% static 'images/homepage_image.jpg' %}">
-                    </div>
-                </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="image-container ">
+                <img class="homepage-image mb-4" src="{% static 'images/homepage_image.jpg' %}" alt="Woman with bold eyeshadow">
+            </div>
         </div>
     </div>
+</div>
 
-    
-    <footer>
-        <div class="footer-container">
-            <div class="row">
-                <div class="col-12">
-                    <ul id="social-media">
-                        <li>
+
+<footer>
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-12">
+                <ul id="social-media">
+                    <li>
                         <a href="https://www.facebook.com/61561674633185/" target="_blank" rel="noopener"
-                            aria-label="Visit us on Facebook (opens in a new tab)"><i class="fa-brands fa-square-facebook"></i></a>
-                        </li>
-                        <li>
+                            aria-label="Visit us on Facebook (opens in a new tab)"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                    <li>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                            aria-label="Visit us on Instagram (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
+                            aria-label="Visit us on Instagram (opens in a new tab)"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
                         <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                            aria-label="Visit us on Twitter (opens in a new tab)"><i class="fa-brands fa-x-twitter"></i></a>
-                        </li>
-                        <li>
+                            aria-label="Visit us on Twitter (opens in a new tab)"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
                         <a href="http://www.youtube.com/" target="_blank" rel="noopener"
-                            aria-label="Visit us on Youtube (opens in a new tab)"><i class="fa-brands fa-square-youtube"></i></a>
-                        </li>
-                    </ul>
-                        <p class="copyright w-100 font"><small>Created by Natalie Lockyer - Copyright Protected 2024</small></p>
-                </div>
-            </div>               
+                            aria-label="Visit us on Youtube (opens in a new tab)"><i
+                                class="fa-brands fa-square-youtube"></i></a>
+                    </li>
+                </ul>
+                <p class="copyright w-100 font"><small>Created by Natalie Lockyer - Copyright Protected 2024</small></p>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 {% endblock %}

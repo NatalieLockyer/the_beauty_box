@@ -8,10 +8,10 @@
         <meta http-equiv="X-UA-Compatable" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="decription" content="The UKs most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones of for yourself.
+        <meta name="description" content="The UKs most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones of for yourself.
         Join us today for 10% off your first order. There are many other discounts and sale items to choose from.">
         <meta name="keywords"
-            content="The Beauty Box, make up products, huge discounts, sign up discounts, skincare for all skintypes, foundation shades to choose from, easy makeup tutorials, up to date beauty blogs, lastest beauty trends.
+            content="The Beauty Box, make up products, huge discounts, sign up discounts, skincare for all skintypes, foundation shades to choose from, easy makeup tutorials, up to date beauty blogs, latest beauty trends.
             tips and tricks, beauty account, body products, next day delivery, free delivery, make up gifts, great gift ideas, quality items, good value, 
             face products, body products, make up accessories, professional website, sale items, beauty by brand, MAC, Dior, Estee Lauder, Bare Minerals, top rated seller, 
             buying gifts for girls, great gifts for wife, gifts for girlfiend, beauty product gift ideas">
@@ -57,6 +57,7 @@
         <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8149fa7b5a842061fe0cd04d0/6db4c7e974b5be9b20de3dcba.js");</script>
 
         <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
+
     </head>
 
 <body>
@@ -65,11 +66,14 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
+
+                    <!-- Navigation Bar -->
                     <!-- Main Page Title-->
                     <h2 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h2> 
                 </a>
                 <hr>
             </div>
+            <!-- Search Bar -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
@@ -85,6 +89,7 @@
                     </div>
                 </form>
             </div>
+            <!-- My Account -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -115,7 +120,7 @@
                             {% endif %}
                         </div>
                     </li>
-                    <!-- Basket -->
+                    <!-- Shopping Basket -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_basket' %}">
