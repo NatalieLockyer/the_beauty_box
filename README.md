@@ -510,7 +510,10 @@ In order to make a payment always Declines (e.g. insufficent funds):
 * [Django](https://www.djangoproject.com/) - Used this the create my site
 * [Code Institute](https://learn.codeinstitute.net/dashboard) - Used the walkthrough alongside implementing my project
 * [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - Used to check and fix python errors
+* [ChatGPT 4](https://chat.openai.com/) - Used to find possible solutions to major issues, and to populate the content for the blogs and tutorials.
 * [Google Fonts](https://fonts.google.com/) - Used for fonts across my site
 * [Heroku](https://www.heroku.com/home) - Used to deploy the site too.
 * [Python](https://www.python.org/) - Used for coding functions and classes
-* [Pexels](https://www.pexels.com/) - Used for selecting images/videos for my website
+* [Pexels](https://www.pexels.com/) - Used for selecting images for my website
+* [Coverr](https://coverr.co/) - Used for selecting videos for my website
+* [Kaggle](https://www.kaggle.com/) - Used to get database content for products
