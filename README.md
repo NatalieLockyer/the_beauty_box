@@ -61,11 +61,12 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
   + [Full Testing](#)
   + [Fixed Bugs](#)
   + [Supported Browsers](#)
-  + [Deployment and Local Deployment](#)
-  + [Deployment](#)
-  + [Local Deployment](#)
-  + [How to Clone](#)
-+ [Credits and Acknowledgements](#)
++ [Deployment](#deployment)
+  + [Creating the Database](#creating-the-database)
+  + [Heroku Deployment](#heroku-deployment)
+  + [Deployment and Local Deployment](#deployment-and-local-deployment)
+  + [How to Clone](#how-to-clone)
++ [Credits and Acknowledgements](#credits-and-acknowledgements)
 
 
 ***
@@ -499,11 +500,73 @@ In order to make a payment always Declines (e.g. insufficent funds):
 |4000 0000 0000 9995|any date|any 3 numbers|any 5 numbers|
 
 
-## Testing
+# Testing
+Throughout the development of my website I used both automated and manual testing.
+I completed manual testing by checking each page to ensure all the features workrd as expected and in line with the user stories. 
+I completed automated testing by running my code through validators and linters in order to check for errors in the code and to ensure there are no pep8 compliance issues. 
 
+### Full Manual Testing
 
+#### Responsivity Testing
+|Responsivity | Mobile S (320px)| Mobile L (425px)| Tablet (768px) | Desktop (1024px)|
+|---|:---:|:---:|:---:|:---:|
+|Responsive UI Components|✓|✓|✓|✓|
+|Responsive Text|✓|✓|✓|✓|
+|Responsive Forms|✓|✓|✓|✓|
+|Responsive Button Placement|✓|✓|✓|✓|
+|Responsive Nav Bar|✓|✓|✓|✓|
+|Responsive Footer|✓|✓|✓|✓|
 
+#### Page Testing 
+|Nav Bar Testing|Yes/No|
+|---|:---:|
+|Nav bar text and styles are loaded|✓|
 
+### Code Validation
+
+### Fixed Bugs
+### Supported Browsers
+
+# Deployment
+
+## Creating the Database
+To create the database I used ElephantSQL for this project. During development I was using sqlite3 however this isn't usable within deployment
+
+## Heroku Deployment
+To deploy this site on Heroku the following steps were performed:
+
+After the initial account setup
+* Click the "create new app" button on heroku
+* Create a unique name for the app
+* Select region (Europe was selected for this project)
+* Click "create app"
+* Go to settings tab
+* Set config variables
+- EG - AWS_ACCESS_KEY_ID (this connects ta AWS S3 Bucket)
+     - AWS_SECRET_ACCESS_KEY (this connects ta AWS S3 Bucket)
+     - DATABASE_URL (Connects to Database)
+     - SECRET_KEY (Connects to app)
+* Go to the deploy tab
+* Select the deployment method (github was used for this project)
+* Search for the github repository name
+* Then click on Connect
+* There is an option to use manual deployment or automatic deployment. Make sure main branch is selected
+* After the first deployment you will see a message saying "your app was successfully deployed" and there will be a "view" button to take you to your deployed application
+
+## Deployment and Local Deployment
+All code was written within GitPod development environment. 
+I used GitHub for version control and was finally deployed to Heroku from GitHub.
+  How to Fork 
+  * Login to Github
+  * Open repository
+  * Click fork button in the top right corner.
+
+## How to clone 
+  * Login to Github
+  * Open repository 
+  * Click on the 'code' button, select which you would like with HTTPS, SSH or GitHib CLI and copy
+  * Open terminal in code editor and change the current directory to the location you want to use is
+  * Type 'git clone' and paste link that you copied in step 3, press enter
 
 
 ## Credits and Acknowledgements
@@ -517,3 +580,7 @@ In order to make a payment always Declines (e.g. insufficent funds):
 * [Pexels](https://www.pexels.com/) - Used for selecting images for my website
 * [Coverr](https://coverr.co/) - Used for selecting videos for my website
 * [Kaggle](https://www.kaggle.com/) - Used to get database content for products
+* [MailChimp](https://mailchimp.com/) - Used for newletter subscription pop up 
+* [Slack](https://app.slack.com/) - Used for trouble shooting with colleagues
+
+A special thank you to Gemma Sayers who came to my rescue in my hour of need. And a huge thank you to my family, who have supported me throughout this whole course.
