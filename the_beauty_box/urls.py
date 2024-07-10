@@ -28,7 +28,6 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('checkout/', include('checkout.urls')),
     path('contact/', include('contact.urls')),
-    path('error/', include('error.urls')),
     path('help/', include('help.urls')),
     path('privacy/', include('privacy.urls')),
     path('products/', include('products.urls')),
