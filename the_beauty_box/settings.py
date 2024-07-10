@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'profiles',
     'tutorial',
     'contact',
-    'error',
     'help',
     'blog',
     'privacy',
