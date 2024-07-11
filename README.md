@@ -57,10 +57,12 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
     + [Design](#design)
     + [Stripe](#stripe)
 + [Testing](#)
-  + [Code Validation](#)
-  + [Full Testing](#)
-  + [Fixed Bugs](#)
-  + [Supported Browsers](#)
+  + [Full Testing](#full-manual-testing)
+    + [Responsivity Testing](#responsivity-testing)
+    + [Page Testing](#page-testing)
+    + [Code Validation](#)
+  
+    + [Fixed Bugs](#)
 + [Deployment](#deployment)
   + [Creating the Database](#creating-the-database)
   + [Heroku Deployment](#heroku-deployment)
@@ -235,6 +237,10 @@ I have also used jinga templating. If the user is not logged in they have the op
 * A footer that links the user to social media pages, and in particular our 'Beauty Box' Facebook page.
 
 ![Homepage Screenshot](media/readme_images/homepage_screenshot.png)
+
+The Beauty Box Facebook Business Page
+![Facebook Screenshot](media/readme_images/fb-top.png)
+![Facebook](media/readme_images/fb-middle.png)
 
 #### Products Page
 * The products page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
@@ -561,8 +567,10 @@ I completed automated testing by running my code through validators and linters 
 |Homepage buttons returns to homepage|✓|
 |User can see, product info, price, quantity and subtotal|✓|
 |Each is updated when appropriate|✓|
+|Quantity + button increases quantity|✓|
+|Quantity - button decreases quantity|✓|
 |Update button updates quantity|✓|
-|Remove button updateds quantity
+|Remove button updates quantity|✓|
 |User can see, basket total, delivery charges (if any), grand total, and how much extra to spend to get free delivery|✓|
 |Keep shopping button returns useer to products page|✓|
 |Secure checkout opens secure checkout|✓|
@@ -645,6 +653,13 @@ I completed automated testing by running my code through validators and linters 
 |User is able to input details and click submit|✓|
 |Success message appears|✓|
 
+|My Profile Testing|Yes/No|
+|---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|User is able to update delivery information|✓|
+|User is able to see previous orders (if any)|✓|
+
 |Product Management Testing|Yes/No|
 |---|:---:|
 **Superuser Only**
@@ -700,11 +715,45 @@ I completed automated testing by running my code through validators and linters 
 |Superuser is able to add tutorials|✓|
 |Superuser is able to edit tutorials|✓|
 |Superuser is able to delete tutorials|✓|
+**MAILCHIMP**
+|Superuser is able to login to MailChimp as see users who have subscribed|✓|
 
 ### Code Validation
 
+I opted to use PageSpeed Insights instead of the browser devtool version of Lighthouse. PageSpeed uses the Lighthouse API in order to test webpages.
+
+#### Homepage
+
+#### Signup 
+
+#### Login
+
+#### Product page
+
+#### Tutorials
+
+#### Blogs
+
+#### Product Management
+
+#### Tutorial Management 
+
+#### Blog Management
+
+#### Help Page
+
+#### Contact Page 
+
+#### My Profile
+
+
+
+
+
+
+
+
 ### Fixed Bugs
-### Supported Browsers
 
 # Deployment
 

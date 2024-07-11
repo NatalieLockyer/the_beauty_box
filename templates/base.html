@@ -5,16 +5,11 @@
     <head>
         <!-- Required meta tags -->
         {% block meta %}
-        <meta http-equiv="X-UA-Compatable" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="The UKs most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones of for yourself.
-        Join us today for 10% off your first order. There are many other discounts and sale items to choose from.">
-        <meta name="keywords"
-            content="The Beauty Box, make up products, huge discounts, sign up discounts, skincare for all skintypes, foundation shades to choose from, easy makeup tutorials, up to date beauty blogs, latest beauty trends.
-            tips and tricks, beauty account, body products, next day delivery, free delivery, make up gifts, great gift ideas, quality items, good value, 
-            face products, body products, make up accessories, professional website, sale items, beauty by brand, MAC, Dior, Estee Lauder, Bare Minerals, top rated seller, 
-            buying gifts for girls, great gifts for wife, gifts for girlfiend, beauty product gift ideas">
+        <meta name="description" content="The UK's most popular, trustworthy, online beauty shop, with lots of different skincare, makeup and accessories. These are great as gifts for loved ones or for yourself. Join us today for 10% off your first order. There are many other discounts and sale items to choose from.">
+        <meta name="keywords" content="The Beauty Box, make up products, huge discounts, sign up discounts, skincare for all skin types, foundation shades to choose from, easy makeup tutorials, up to date beauty blogs, latest beauty trends, tips and tricks, beauty account, body products, next day delivery, free delivery, make up gifts, great gift ideas, quality items, good value, face products, body products, make up accessories, professional website, sale items, beauty by brand, MAC, Dior, Estee Lauder, Bare Minerals, top rated seller, buying gifts for girls, great gifts for wife, gifts for girlfriend, beauty product gift ideas">
         {% endblock %}
 
         {% block extra_meta %}
@@ -23,8 +18,7 @@
         <!-- CSS -->
         {% block corecss %}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -37,214 +31,208 @@
         <!-- Javascript -->
         {% block corejs %}
         <script src="https://kit.fontawesome.com/3ad1443fbb.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
         <!--Stripe payments-->
         <script src="https://js.stripe.com/v3/"></script>
-        {% endblock%}
+        {% endblock %}
 
         {% block extra_js %}
         {% endblock %}
 
         <!-- Mailchimp Popup -->
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8149fa7b5a842061fe0cd04d0/6db4c7e974b5be9b20de3dcba.js");</script>
+        <script id="mcjs">
+        !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8149fa7b5a842061fe0cd04d0/6db4c7e974b5be9b20de3dcba.js");</script>
 
         <title>The Beauty Box {% block extra_title %}{% endblock %}</title>
 
     </head>
 
-<body>
-    <!-- Header -->
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+    <body>
+        <!-- Header -->
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <!-- Navigation Bar -->
+                        <!-- Main Page Title-->
+                        <h1 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h1> 
+                    </a>
 
-                    <!-- Navigation Bar -->
-                    <!-- Main Page Title-->
-                    <h1 class="logo-font text-black my-0"><strong>The Beauty Box</strong></h1> 
-                </a>
-                <hr>
-            </div>
-            <!-- Search Bar -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-pink rounded-0" type="text" name="q"
-                            placeholder="Search">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-pink border border-pink rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- My Account -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                    <hr>
+                </div>
+                <!-- Search Bar -->
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-pink rounded-0" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-pink border border-pink rounded-0" aria-label="Search" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                        <!-- Drop down menu on the Nav bar -->
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options"
-                            style="position: absolute; z-index: 1001;">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item font">Product Management</a>
-                            <a href="{% url 'add_tutorial' %}" class="dropdown-item font">Tutorial Management</a>
-                            <a href="{% url 'add_blog' %}" class="dropdown-item font">Blog Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item font">My Profile</a>
-                            <a href="{% url 'contact' %}" class="dropdown-item font">Contact</a>
-                            <a href="{% url 'help' %}" class="dropdown-item font">Help</a>
-                            <a href="{% url 'home' %}" class="dropdown-item font">Home</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item font">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item font">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item font">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <!-- Shopping Basket -->
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_basket' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
+                    </form>
+                </div>
+                <!-- My Account -->
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <!-- Drop down menu on the Nav bar -->
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options"
+                                style="position: absolute; z-index: 1001;">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item font">Product Management</a>
+                                <a href="{% url 'add_tutorial' %}" class="dropdown-item font">Tutorial Management</a>
+                                <a href="{% url 'add_blog' %}" class="dropdown-item font">Blog Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item font">My Profile</a>
+                                <a href="{% url 'contact' %}" class="dropdown-item font">Contact</a>
+                                <a href="{% url 'help' %}" class="dropdown-item font">Help</a>
+                                <a href="{% url 'home' %}" class="dropdown-item font">Home</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item font">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item font">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item font">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!--Scrolling banner on nav bar -->
-        <div class="banner">
-            <div class="scrolling-text">
-                <div class="text-item">FREE SHIPPING WHEN YOU SPEND £{{ free_delivery_threshold }} OR MORE!</div>
-                <div class="text-item">NEW ARRIVALS COMING SOON!</div>
-                <div class="text-item">SIGN UP NOW FOR 10% OF YOUR FIRST ORDER!</div>
-            </div>
-        </div>
-
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-
-            </nav>
-        </div>
-
-        <!-- Highlights Carousel -->
-        <div class="row">
-            <div id="highlight-carousel" class="carousel slide p-2 bg-lilac w-100 d-none d-lg-block"
-                data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="p-inline w-100">
-                                    <p class="text-center font"><span class="fas fa-truck"></span> FREE UK Shipping when
-                                        you spend £{{ free_delivery_threshold }} or more</p>
-                                    <p class="text-center font"><span class="fas fa-coins"></span> 10% off when you sign
-                                        up!</p>
-                                    <p class="text-center font"><span class="fas fa-arrows-rotate"></span> Quick and
-                                        easy returns
+                        </li>
+                        <!-- Shopping Basket -->
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="{% url 'view_basket' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
                                     </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Scrolling banner on nav bar -->
+            <div class="banner">
+                <div class="scrolling-text">
+                    <div class="text-item">FREE SHIPPING WHEN YOU SPEND £{{ free_delivery_threshold }} OR MORE!</div>
+                    <div class="text-item">NEW ARRIVALS COMING SOON!</div>
+                    <div class="text-item">SIGN UP NOW FOR 10% OFF YOUR FIRST ORDER!</div>
+                </div>
+            </div>
+
+            <div class="row bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+
+                </nav>
+            </div>
+
+            <!-- Highlights Carousel -->
+            <div class="row">
+                <div id="highlight-carousel" class="carousel slide p-2 bg-lilac w-100 d-none d-lg-block"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="p-inline w-100">
+                                        <p class="text-center font"><span class="fas fa-truck"></span> FREE UK Shipping when
+                                            you spend £{{ free_delivery_threshold }} or more</p>
+                                        <p class="text-center font"><span class="fas fa-coins"></span> 10% off when you sign
+                                            up!</p>
+                                        <p class="text-center font"><span class="fas fa-arrows-rotate"></span> Quick and
+                                            easy returns
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Carousel for small screens -->
-        <div id="highlight-carousel-small" class="carousel slide p-4 bg-lilac d-block d-lg-none" data-ride="carousel">
-            <div class="carousel-indicators p-2">
-                <button type="button" data-target="#highlight-carousel-small" data-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-target="#highlight-carousel-small" data-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-target="#highlight-carousel-small" data-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-target="#highlight-carousel-small" data-slide-to="3"
-                    aria-label="Slide 4"></button>
+            <!-- Carousel for small screens -->
+            <div id="highlight-carousel-small" class="carousel slide p-4 bg-lilac d-block d-lg-none" data-ride="carousel">
+                <div class="carousel-indicators p-2">
+                    <button type="button" data-target="#highlight-carousel-small" data-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-target="#highlight-carousel-small" data-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-target="#highlight-carousel-small" data-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-target="#highlight-carousel-small" data-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend £{{ free_delivery_threshold }} or more</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center"><span class="fas fa-clock"></span> Fast Delivery</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center"><span class="fas fa-coins"></span> 10% off when you sign up</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p class="text-center"><span class="fas fa-truck"></span> FREE UK Delivery when you spend £{{ free_delivery_threshold }} or more
-                    </p>
-                </div>
-                <div class="carousel-item">
-                    <p class="text-center"><span class="fas fa-clock"></span> Fast Delivery</p>
-                </div>
-                <div class="carousel-item">
-                    <p class="text-center"><span class="fas fa-coins"></span> 10% off when you sign up</p>
-                </div>
-                <div class="carousel-item">
-                    <p class="text-center"><span class="fas fa-arrows-rotate"></span> Quick and easy returns</p>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
+        {% if messages %}
+            <div class="message-container">
+                {% for message in messages %}
+                {% with message.level as level %}
+                {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+                {% endwith %}
+                {% endfor %}
+            </div>
         {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
+        {% block postloadjs %}
+            <script type="text/javascript">
+                $('.toast').toast('show');
+            </script>
+        {% endblock %}
 
-</body>
+    </body>
 
 </html>

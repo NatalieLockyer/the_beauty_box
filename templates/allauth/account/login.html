@@ -42,7 +42,7 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <a class="btn btn-outline-pink rounded-0 font" href="{% url 'home' %}">Home</a>
-    <button class="primaryAction font" type="submit">{% trans "Sign In" %}</button>
+    <button class="primaryAction font" type="submit" aria-label="submit">{% trans "Sign In" %}</button>
     <p class="mt-2">
       <a class="button secondaryAction font" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
     </p>

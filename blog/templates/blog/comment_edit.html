@@ -21,7 +21,7 @@
             <form method="post">
                 {% csrf_token %}
                 {{ comment_form|crispy }}
-                <button type="submit" class="btn btn-pink">Submit</button>
+                <button type="submit" class="btn btn-pink" aria-label="Submit">Submit</button>
             </form>
         </div>
     </div>
