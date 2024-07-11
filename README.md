@@ -502,7 +502,7 @@ In order to make a payment always Declines (e.g. insufficent funds):
 
 # Testing
 Throughout the development of my website I used both automated and manual testing.
-I completed manual testing by checking each page to ensure all the features workrd as expected and in line with the user stories. 
+I completed manual testing by checking each page to ensure all the features worked as expected and in line with the user stories. 
 I completed automated testing by running my code through validators and linters in order to check for errors in the code and to ensure there are no pep8 compliance issues. 
 
 ### Full Manual Testing
@@ -569,38 +569,137 @@ I completed automated testing by running my code through validators and linters 
 
 |Secure Checkout Testing|Yes/No|
 |---|:---:|
-
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|Detail for works as expected|✓|
+|Detail for is pre-populated if user is logged in|✓|
+|Order summary is correct including products and total/delivery/grand total|✓|
+|Create an account button opens registration page|✓|
+|Login button opens login page|✓|
+|Payment details can be entered|✓|
+|Adjust basket button opens the basket page|✓|
+|Complete Order button completes the order|✓|
+|Success messages appears to confirm order|✓|
+|Order confirmation details appear on the screen|✓|
+|Confirmation email is sent to user|✓|
 
 |Tutorial Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|4 tutorials appear on the page|✓|
+|Clicked on each image and it loads to the tutorial detail page|✓|
+|The video is displayed but does not play automatically|✓|
+|User clicks the play button and the video starts|✓|
+|Return to tutorials button returns to tutorial page|✓|
 
 |Blog Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|4 blogs appear on the page|✓|
+|Clicked on each image and it loads to the blog detail page|✓|
+|Logged in users are able to add a comment|✓|
+|Logged in users are able to edit their comment|✓|
+|Logged in users are able to delete their comment|✓|
+|Comments are displayed to others when the admin has approved them|✓|
+|All users are able to see authorised comments|✓|
+|Return to blogs button returns to blog page|✓|
 
-|Sign Up Testing|Yes/No|
+|Sign Up/Registration Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Aready have an account sign in button takes to login page|✓|
+**Enter details and select sign up -**
+|Success message appears|✓|
+|User recieves a verification email|✓|
+|User activates the verification link and taken to login page|✓|
+|User confirms email on the page|✓|
+|User then has access to their account|✓|
 
-|Login Testing|Yes/No|
+|SignIn/Login Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Not yet created an account, signup button goes to signup page|✓|
+**Enter details and select sign in -**
+|Remember me button remembers me|✓|
+|Successful login message appears|✓|
+|Forget Password - resets password|✓|
 
 |Logout Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Sign out button signs the user out of their account|✓|
 
 |Help Page Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|Contact page button opens contact page|✓|
+|Privacy policy link opens our websites privacy policy|✓|
 
 |Contact Page Testing|Yes/No|
 |---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage buttons returns to homepage|✓|
+|User is able to input details and click submit|✓|
+|Success message appears|✓|
 
 |Product Management Testing|Yes/No|
 |---|:---:|
+**Superuser Only**
+|Nav bar text and styles are loaded|✓|
+|Superuser is able to input details on required fields|✓|
+|Superuser is able to 'select and add image'|✓|
+|Superuser clicks add product and product is added to site|✓|
 
 |Tutorial Management Testing|Yes/No|
 |---|:---:|
+**Superuser Only**
+|Nav bar text and styles are loaded|✓|
+|Superuser is able to input details on required fields|✓|
+|Superuser is able to 'select and add image and video'|✓|
+|Superuser clicks add tutorial and tutorial is added to site|✓|
 
 |Blog Management Testing|Yes/No|
 |---|:---:|
+**Superuser Only**
+|Nav bar text and styles are loaded|✓|
+|Superuser is able to input details on required fields|✓|
+|Superuser is able to 'select and add image'|✓|
+|Superuser clicks add blog and blog is added to site|✓|
 
+|Admin Testing|Yes/No|
+|---|:---:|
+**Superuser Only**
+**AUTHENTICATION AND AUTHORIZATION**
+|Superuser user is able to see users who have register for an account|✓|
+|Superuser is able to add personal information if needed|✓|
+|Superuser is able to add permissions to users|✓|
+**BLOGS**
+|Superuser is able to add/edit/delete blogs|✓|
+|Superuser is able to see users comments|✓|
+|Superuser is able to authorise comments|✓|
+|Superuser is able to delete comments|✓|
+**CHECKOUT**
+|Superuser is able to see orders|✓|
+|Superuser is able to edit orders|✓|
+|Superuser is able to delete orders|✓|
+**CONTACT**
+|Superuser is able to see collaboration request|✓|
+|Superuser is able to mark the request as read|✓|
+|Superuser is able to delete the request|✓|
+**PRODUCTS**
+|Superuser is able to add categories|✓|
+|Superuser is able to edit categories|✓|
+|Superuser is able to delete categories|✓|
+|Superuser is able to add products|✓|
+|Superuser is able to edit products|✓|
+|Superuser is able to delete products|✓|
+**TUTORIALS**
+|Superuser is able to add tutorials|✓|
+|Superuser is able to edit tutorials|✓|
+|Superuser is able to delete tutorials|✓|
 
 ### Code Validation
 
