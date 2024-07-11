@@ -518,9 +518,89 @@ I completed automated testing by running my code through validators and linters 
 |Responsive Footer|✓|✓|✓|✓|
 
 #### Page Testing 
-|Nav Bar Testing|Yes/No|
+|Homepage Testing|Yes/No|
 |---|:---:|
 |Nav bar text and styles are loaded|✓|
+|The Beauty Box title returns to homepage|✓|
+|The search bar returns relevent items|✓|
+|My account opens dropdown list|✓|
+|Register opens registration page|✓|
+|Login opens login page|✓|
+|Product Management opens P/M page|✓|
+|Tutorial Management opens to T/M page|✓|
+|Blog Management opens B/M page|✓|
+|My Profile opens M/P page|✓|
+|Contact opens C/P|✓|
+|Help opens H/P|✓|
+|Home returns to home page|✓|
+|Shopping basket opens basket page|✓|
+|All list items (foundation, eyes etc) take the user to the relevent page|✓|
+|Banner scrolls across the screen|✓|
+|Shop Now button opens product page|✓|
+|Tutorials opens tutorials page|✓|
+|Beauty Blog opens blog page|✓|
+|Social media links open relevent page|✓|
+|Modal appears on loading asking new users to subscribe|✓|
+|All items on homepage are responsive|✓|
+
+|Products Testing|Yes/No|
+|---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Homepage button returns to homepage|✓|
+|Sort by filter arranges products in specific order|✓|
+|Selecting product opens product detail|✓|
+|Quantity updates when changed|✓|
+|Keep shopping button returns to products|✓|
+|Add to basket, adds the item to the basket|✓|
+|Basket total is updated|✓|
+
+|Basket Testing|Yes/No|
+|---|:---:|
+|Nav bar text and styles are loaded|✓|
+|Success message when adding item to basket|✓|
+|Homepage buttons returns to homepage|✓|
+|User can see, product info, price, quantity and subtotal|✓|
+|Each is updated when appropriate|✓|
+|Update button updates quantity|✓|
+|Remove button updateds quantity
+|User can see, basket total, delivery charges (if any), grand total, and how much extra to spend to get free delivery|✓|
+|Keep shopping button returns useer to products page|✓|
+|Secure checkout opens secure checkout|✓|
+
+|Secure Checkout Testing|Yes/No|
+|---|:---:|
+
+
+|Tutorial Testing|Yes/No|
+|---|:---:|
+
+|Blog Testing|Yes/No|
+|---|:---:|
+
+|Sign Up Testing|Yes/No|
+|---|:---:|
+
+|Login Testing|Yes/No|
+|---|:---:|
+
+|Logout Testing|Yes/No|
+|---|:---:|
+
+|Help Page Testing|Yes/No|
+|---|:---:|
+
+|Contact Page Testing|Yes/No|
+|---|:---:|
+
+|Product Management Testing|Yes/No|
+|---|:---:|
+
+|Tutorial Management Testing|Yes/No|
+|---|:---:|
+
+|Blog Management Testing|Yes/No|
+|---|:---:|
+
 
 ### Code Validation
 
