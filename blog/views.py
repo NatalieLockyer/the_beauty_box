@@ -1,11 +1,11 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.utils.safestring import mark_safe
 
-from .models import Blog, Comment
 from .forms import BlogForm, CommentForm
+from .models import Blog, Comment
 
 
 def all_blogs(request):

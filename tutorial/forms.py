@@ -1,6 +1,7 @@
 from django import forms
-from .widgets import CustomClearableFileInput
+
 from .models import Tutorial
+from .widgets import CustomClearableFileInput
 
 
 class DescriptionForm(forms.Form):

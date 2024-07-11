@@ -278,7 +278,7 @@ input[name='q']::placeholder {
     border: 1px solid black !important;
 }
 
-/* Allauth form formatting*/
+/* -------------Allauth form formatting------------ */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -317,7 +317,7 @@ input[name='q']::placeholder {
     line-height: 1.5;
     border-radius: 0;
 
-    /* standard bootstrap button transitions */
+/* ----------standard bootstrap button transitions---------- */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -366,7 +366,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* Footer */
+/* ---------------------Footer----------------------- */
 
 footer {
     position: fixed;

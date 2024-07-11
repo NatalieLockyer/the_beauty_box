@@ -4,7 +4,7 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
 
 ***
 
-![Image of sie on devices](media/readme_images/site-image.png)
+![Image of site on devices](media/readme_images/site-image.png)
 
 [Please click here to view my live website](https://the-beauty-box-9dcfa44a254a.herokuapp.com/)
 
@@ -33,6 +33,7 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
     + [Features](#features)
       + [Defensive Programming](#defensive-programming)
       + [Main Homepage](#homepage)
+      + [Facebook Page](#facebook-page)
       + [Products Page](#products-page)
       + [Product Detail Page](#product-detail-page)
       + [Shopping Basket Page](#shopping-basket-page)
@@ -45,7 +46,7 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
       + [Sign Up Page](#sign-up-page)
       + [Login Page](#login-page)
       + [Profile Page](#profile-page)
-      + [Managment Pages](#management-pages-superusers-only)
+      + [Management Pages](#management-pages-superusers-only)
       + [Help Page](#help-page)
       + [Contact Page](#contact-page)
       + [404 Error Page](#404-error-page)
@@ -60,9 +61,8 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
   + [Full Testing](#full-manual-testing)
     + [Responsivity Testing](#responsivity-testing)
     + [Page Testing](#page-testing)
-    + [Code Validation](#)
-  
-    + [Fixed Bugs](#)
+    + [Python Testing](#python-testing)  
+    + [Fixed Bugs](#fixed-bugs)
 + [Deployment](#deployment)
   + [Creating the Database](#creating-the-database)
   + [Heroku Deployment](#heroku-deployment)
@@ -75,17 +75,17 @@ A fictional E-commerce Beauty Store using Django and Stripe, developed by Natali
 ***
 
 # Purpose of the Project
-The Beauty Box is a ficticious E-Commerce website that sells beauty products and accessories. The website also has make-up tutorial videos and make-up blogs. 
-The website has been designed to give the user a great experience, from an attractive and eyecatching website, to filtering our products to see the newly listed items, tips and tricks in our make-up tutorials and blogs containing up to date and intresting information.  
+The Beauty Box is a fictitious E-Commerce website that sells beauty products and accessories. The website also has make-up tutorial videos and make-up blogs. 
+The website has been designed to give the user a great experience, from an attractive and eye catching website, to filtering our products to see the newly listed items, tips and tricks in our make-up tutorials and blogs containing up to date and interesting information.  
 
-This full stack frame work has been built using the Django framework. 
+This full stack project has been built using the Django framework. 
 
 The Beauty Box, provides its users with 
-* A registration page, which will give the user a profile page once complete. The profile page will allow the user to  update their contact/delivery and payment details and also see their previous orders (if any).
+* A registration page, which will give the user a profile page once complete. The profile page will allow the user to update their contact/delivery and payment details and also see their previous orders (if any).
 * A product page, detailing all our items we have for sale, which can be filtered into many different categories.
 * A checkout page, listing the items in their basket and a secure checkout.
-* A tutorial page were users can get the latest tips and tricks and instructions on how to apply their make-up.
-* A blog page, again with all the lastest tips and tricks, and the most up to date and interesting information.
+* A tutorial page where users can get the latest tips and tricks and instructions on how to apply their make-up.
+* A blog page, with all the latest tips and tricks, and the most up to date and interesting information.
 * A contact page, where users can get in touch, join our mailing list or ask questions.
 * A help page, where users can see our returns policy, delivery costs and our privacy policy.
 
@@ -102,12 +102,11 @@ In order to make an example purchase a specific card number is required:
 |4242 4242 4242 4242|any future date|any 3 numbers|any 5 numbers|
 
 
-
 # User Experience
 
 ### Key Project Goals
 
-* To write and develop an E-commerce website that is an eyecatching, informative, interactive, and enjoyable website that users will want to return to.
+* To write and develop an E-commerce website that is an eye catching, informative, interactive, and enjoyable website that users will want to return to.
 * The user will be able to navigate around the website with ease, either on a mobile or desktop device. 
 * The main homepage is clear as to what the website is about and have accessible menus taking the user to the different pages of the website. 
 * Users that register for a Beauty Box account will be able to see their own profile, which will have up to date contact/delivery and payment details. Users will also be able to see their order history (if any). 
@@ -127,7 +126,7 @@ In order to make an example purchase a specific card number is required:
 
 ### User Requirements and Expectations 
 
-* An accessable website, that is clear and easy to navigate and understand.
+* An accessible website, that is clear and easy to navigate and understand.
 * The ability to register for a Beauty Box account
 * The ability to view products, and view them in more detail, before they add them to their basket.
 * The ability to filter products into categories.
@@ -160,6 +159,7 @@ As a store owner:
 
 ### Website Menus
 * Homepage
+* Facebook Page
 * Index
 * Registration/Sign Up Page
 * Login Page
@@ -222,10 +222,9 @@ For my website I used a font called Raleway. For the main headings and subtitles
 #### Defensive Programming 
 Throughout my website I have implemented defensive programming in order to keep it safe.
 
-Within my code, I have used python decorators, specifically 'login_required'. This means that users are not able to access the admin/user profiles, unless they are logged in. It also stops
-the users from accessing these pages via their URLs. Users will get error messages if they try to access these parts of the site that they do not have access to. 
+Within my code, I have used python decorators, specifically 'login_required'. This means that users are not able to access the admin/user profiles, unless they are logged in. It also stops the users from accessing these pages via their URLs. Users will get error messages if they try to access these parts of the site that they do not have access to. 
 
-I have also used jinga templating. If the user is not logged in they have the option to 'register' or login. If the user is logged in they are able to access their profile page. Jinja also checks if the user is a superuser and block access to admin pagegs if required too.
+I have also used jinga templating. If the user is not logged in they have the option to 'register' or login. If the user is logged in they are able to access their profile page. Jinja also checks if the user is a superuser and block access to admin pages if required too.
 
 #### Homepage
 * The homepage contains a fully responsive navigation bar used to navigate throughout the site. 
@@ -238,6 +237,7 @@ I have also used jinga templating. If the user is not logged in they have the op
 
 ![Homepage Screenshot](media/readme_images/homepage_screenshot.png)
 
+#### Facebook Page
 The Beauty Box Facebook Business Page
 ![Facebook Screenshot](media/readme_images/fb-top.png)
 ![Facebook](media/readme_images/fb-middle.png)
@@ -718,42 +718,81 @@ I completed automated testing by running my code through validators and linters 
 **MAILCHIMP**
 |Superuser is able to login to MailChimp as see users who have subscribed|✓|
 
-### Code Validation
-
-I opted to use PageSpeed Insights instead of the browser devtool version of Lighthouse. PageSpeed uses the Lighthouse API in order to test webpages.
+### Python Testing
+I ran all of my python files through Code Institute Python Linter to check for any semantic or stylistic problems.
 
 #### Homepage
+All files within Homepage checked
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
-#### Signup 
+#### Product Page
+All files within Product Page checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
-#### Login
+#### Basket Page
+All files within Basket checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
-#### Product page
+#### Checkout Page
+All files within Checkout checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
 #### Tutorials
+All files within Tutorials checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
 #### Blogs
-
-#### Product Management
-
-#### Tutorial Management 
-
-#### Blog Management
-
-#### Help Page
+All files within Blogs checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
 #### Contact Page 
+All files within Content checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
+
+#### Help Page
+All files within Help checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
 #### My Profile
+All files within Profile checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
+#### Privacy Page
+All files within Privacy checked 
+<br> 
+![No Errors](media/readme_images/ci_linter.png)
+***
 
+### Known Bugs and Fixes
+- Error stating there was a KeyError at /checkout/ 'item_by_shade'
+  * Fix attempt - Check for spelling issues
+  * Outcome - Should have read 'items_by_shade' - No longer an error
 
+- 404 Within Stripe
+  * Fix attempt - Adding my secret_keys to the the env.py file 
+  * Outcome - Checkout successful - No longer and error.
 
-
-
-
-
-### Fixed Bugs
+- Project Crash after installing Django V.4
+  * Fix attempt - I had to remove all installed packages and restore the packages from a previous commit. In the process I lost a significant amount of work which I had to re-do
+  * Outcome - Project is now working again.
 
 # Deployment
 
