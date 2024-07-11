@@ -1,5 +1,7 @@
 # [The Beauty Box](https://the-beauty-box-9dcfa44a254a.herokuapp.com/)
 
+***
+
 A fictional E-commerce Beauty Store using Django and Stripe, developed by Natalie Lockyer.
 
 ***
