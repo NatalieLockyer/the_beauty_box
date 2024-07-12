@@ -244,6 +244,10 @@ The Beauty Box Facebook Business Page
 ![Facebook Screenshot](media/readme_images/fb-top.png)
 ![Facebook](media/readme_images/fb-middle.png)
 
+#### MailChimp Popup - Newsletter
+Newsletter Signup
+![MailChimp Newsletter Signup](media/readme_images/mailchimp_popup.png)
+
 #### Products Page
 * The products page is fully responsive, altering the layout depending on the size of the device that is used to view it. 
 * The navigation bar is also fully reponsive allowing the user to navigate around the store easily
